@@ -13,11 +13,13 @@
     "react",
     "mobile",
     "ios",
+    "ui",
     "android",
     "component",
+    "design",
     "buttonview",
     "button",
-    "design"
+    "text"
   ],
   "repository": {
     "type": "git",
