@@ -1,9 +1,18 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: wanglh
+ * @LastEditors: Please set LastEditors
+ * @Date: 2019-03-11 18:02:58
+ * @LastEditTime: 2019-03-13 17:52:13
+ */
 
-declare module 'react-native-carrot-design'{
+declare module 'react-native-carrot-design' {
     import { ViewStyle } from 'react-native'
-    import {Component} from 'react'
+    import { Component } from 'react'
 
-    export interface ButtonViewProps{
+    /** ButtonViewProps */
+    export interface ButtonViewProps {
+        /** Value: float from 0 to 1.0 */
         activeOpacity?: number,
         title: string,
         disabled?: boolean,
@@ -11,6 +20,15 @@ declare module 'react-native-carrot-design'{
         btnViewStyle?: ViewStyle
         onPressCallback?: () => void,
     }
-    export default class ButtonView extends Component<ButtonViewProps, any> {
+    /** CornerTextViewProps */
+    export interface CornerTextViewProps {
+        title: string,
+        cornerStyle?: ViewStyle
+        textStyle?: ViewStyle
     }
+    export class ButtonView extends Component<ButtonViewProps, any> {
+    }
+    export class CornerTextView extends Component<CornerTextViewProps, any> {
+    }
+    export default ButtonView
 }
