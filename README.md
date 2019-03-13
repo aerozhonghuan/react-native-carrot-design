@@ -7,7 +7,7 @@ This is the React Native custom UI components library, It's components for andro
 `$ npm install react-native-carrot-design --save`
 
 ## Usage
-ButtonView:
+###ButtonView:
 ```javascript
 import ButtonView from 'react-native-carrot-design';
 
