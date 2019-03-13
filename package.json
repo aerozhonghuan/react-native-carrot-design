@@ -1,0 +1,38 @@
+{
+  "name": "react-native-carrot-design",
+  "version": "1.0.0",
+  "description": "This is the React Native custom UI components library, It's components for android and iOS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ios",
+    "android",
+    "component",
+    "buttonview",
+    "button",
+    "design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@https://github.com/rocket-developer/react-native-carrot-design.git"
+  },
+  "author": {
+    "name": "wanglh",
+    "email": "zh-app-developer@aerozhonghuan.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rocket-developer/react-native-carrot-design/issues"
+  },
+  "homepage": "https://github.com/rocket-developer/react-native-carrot-design",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  }
+}
