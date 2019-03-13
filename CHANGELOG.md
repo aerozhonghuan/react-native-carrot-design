@@ -1,1 +1,2 @@
-[v1.0.0]  封装可自定样式的ButtonView
+.[v1.0.1]  Add CornerTextView, which can customize styles.
+.[v1.0.0]  Add ButtonView, which can customize styles.
