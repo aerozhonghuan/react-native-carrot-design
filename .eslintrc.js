@@ -85,7 +85,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],//在JS文件中允许存在JSX语法
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx",] }],//在JS文件中允许存在JSX语法
     "global-require":"off",//image指定source时要用require语句
     "indent":["error",4],//缩进规则为4个空格
     "react/jsx-indent":["error",4],//缩进规则为4个空格

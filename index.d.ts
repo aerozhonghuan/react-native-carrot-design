@@ -1,9 +1,9 @@
 /*
- * @Description: In User Settings Edit
+ * @Description: Type definitions for react-native-carrot-design
  * @Author: wanglh
- * @LastEditors: Please set LastEditors
+ * @LastEditors: wanglh
  * @Date: 2019-03-11 18:02:58
- * @LastEditTime: 2019-03-13 17:52:13
+ * @LastEditTime: 2019-03-14 15:39:23
  */
 
 declare module 'react-native-carrot-design' {
@@ -26,9 +26,20 @@ declare module 'react-native-carrot-design' {
         cornerStyle?: ViewStyle
         textStyle?: ViewStyle
     }
+
+    export interface LoadingViewProps {
+        hide?:boolean,
+    }
+
+    // exports class
     export class ButtonView extends Component<ButtonViewProps, any> {
     }
+
     export class CornerTextView extends Component<CornerTextViewProps, any> {
     }
-    export default ButtonView
+
+    export class LoadingView extends Component<LoadingViewProps> {
+        show():void;
+        close():void;
+    }
 }
