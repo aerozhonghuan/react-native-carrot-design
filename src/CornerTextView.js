@@ -1,9 +1,9 @@
 /*
  * @Description: CornerTextView, which can customize styles
  * @Author: wanglh
- * @LastEditors: Please set LastEditors
+ * @LastEditors: wanglh
  * @Date: 2019-03-13 16:04:39
- * @LastEditTime: 2019-03-13 17:53:56
+ * @LastEditTime: 2019-03-14 10:43:02
  */
 
 import React, { PureComponent } from 'react';
@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
     box: {
-        padding:5,
+        padding: 5,
         borderRadius: 6,
         backgroundColor: '#3296fa',
         flexDirection: 'row',

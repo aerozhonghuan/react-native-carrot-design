@@ -1,11 +1,14 @@
 /*
  * @Description: react-native-carrot-design, which exports customize components
  * @Author: wanglh
- * @LastEditors: Please set LastEditors
- * @Date: 2019-03-11 17:45:01
- * @LastEditTime: 2019-03-13 16:20:11
+ * @LastEditors: wanglh
+ * @Date: 2019-03-11 17:31:51
+ * @LastEditTime: 2019-03-14 10:43:16
  */
-import ButtonView from './src/ButtonView'
-import CornerTextView from './src/CornerTextView'
-export { ButtonView,CornerTextView };
+
+import ButtonView from './src/ButtonView';
+
+import CornerTextView from './src/CornerTextView';
+
+export { ButtonView, CornerTextView };
 export default ButtonView;

@@ -4,7 +4,9 @@
   "description": "This is the React Native custom UI components library, It's components for android and iOS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint-fix": "npx eslint --fix .",
+    "lint": "eslint ."
   },
   "keywords": [
     "react-native",
@@ -36,5 +38,27 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "metro-react-native-babel-preset": "0.46.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-native": "^0.59.0"
   }
 }
