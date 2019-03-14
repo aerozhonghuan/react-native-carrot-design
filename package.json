@@ -37,7 +37,9 @@
   "homepage": "https://github.com/rocket-developer/react-native-carrot-design",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "prop-types": ">=15.6.2",
+    "react": ">=16.5.0",
+    "react-native": ">=0.57.1"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
@@ -55,10 +57,5 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ]
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-native": "^0.59.0"
   }
 }
