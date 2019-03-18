@@ -30,9 +30,9 @@ import { ButtonView } from 'react-native-carrot-design';
 
 **LoadingView**
 
-<br>
 *note:*
 **The LoadingView tag must be the last child of the outermost layout.**
+
 ```
 ...
 render() {
