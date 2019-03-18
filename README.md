@@ -7,7 +7,7 @@ This is the React Native custom UI components library, It's components for andro
 `$ npm install react-native-carrot-design --save`
 
 ## Usage
-###javascript
+##javascript
 **Example import**
 import { ButtonView, CornerTextView, LoadingView } from 'react-native-carrot-design';
 
@@ -29,6 +29,8 @@ import { ButtonView } from 'react-native-carrot-design';
 ```
 
 **LoadingView**
+
+<br>
 *note:*
 **The LoadingView tag must be the last child of the outermost layout.**
 ```
@@ -44,11 +46,11 @@ render() {
  }
   ...
   
-  //TODO:Call show() when you want to show loading
-  this.Loading.show();
+//TODO:Call show() when you want to show loading
+this.Loading.show();
   
-  //TODO:Call close() when you want to close loading
-  this.Loading.close();
+//TODO:Call close() when you want to close loading
+this.Loading.close();
   ...
   
   
