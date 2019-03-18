@@ -61,10 +61,10 @@ this.Loading.close();
 ```
 
 ## More detailed subcomponent documentation
-[ButtonView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/ButtonView.md])
+[ButtonView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/ButtonView.md)
 
-[CornerTextView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md])
+[CornerTextView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md)
 
-[LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md])
+[LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md)
 
   

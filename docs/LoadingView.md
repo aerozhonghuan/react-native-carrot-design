@@ -30,6 +30,12 @@ this.Loading.close();
   ...
   
 ```
+## Properties
+
+| Prop   | Default  | Type | Description | Required|
+| :------------ |:---------------:| :---------------:|  :---------------:|:-----|
+| hide | - | `boolean` | Whether to display loading by default |  `false `|
+
 ## Instance Methods
 
 | Method  | Params  | Description |
