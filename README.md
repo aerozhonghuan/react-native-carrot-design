@@ -7,13 +7,51 @@ This is the React Native custom UI components library, It's components for andro
 `$ npm install react-native-carrot-design --save`
 
 ## Usage
-###ButtonView:
-```javascript
-import ButtonView from 'react-native-carrot-design';
+###javascript
+**Example import**
+import { ButtonView, CornerTextView, LoadingView } from 'react-native-carrot-design';
 
-// TODO: What to do with the module?
-<ButtonView activeOpacity={0.6} btnTitleStyle={{color:'blue',fontSize:19}} btnViewStyle={{backgroundColor:'red'}} title='自定义按钮' onPressCallback={()=>{
-          alert('你点击了按钮!');
-        }}></ButtonView>
+**ButtonView:**
+All you need is to import { ButtonView } from the react-native-carrot-design module and then use the <ButtonView/> tag.
+import React, { Component } from 'react';
+import { ButtonView } from 'react-native-carrot-design';
 ```
+<ButtonView activeOpacity={0.6} btnTitleStyle={{color:'blue',fontSize:19}} 
+     btnViewStyle={{backgroundColor:'red'}} title='自定义按钮' onPressCallback={()=>{
+          alert('pressBtn!');
+     }}>
+</ButtonView>
+```
+
+**CornerTextView:**
+```
+<CornerTextView cornerStyle={{backgroundColor:'orange',width:89}} title="title" textStyle={{color:'red'}}></CornerTextView>
+```
+
+**LoadingView**
+*note:*
+**The LoadingView tag must be the last child of the outermost layout.**
+```
+...
+render() {
+    return (
+      <View style={styles.container}>
+        ...
+        ...
+        <LoadingView ref={r=>{this.Loading = r}} hide = {true} />
+      </View>
+    );
+ }
+  ...
+  
+  //TODO:Call show() when you want to show loading
+  this.Loading.show();
+  
+  //TODO:Call close() when you want to close loading
+  this.Loading.close();
+  ...
+  
+  
+```
+
   
