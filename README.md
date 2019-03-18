@@ -7,20 +7,24 @@ This is the React Native custom UI components library, It's components for andro
 `$ npm install react-native-carrot-design --save`
 
 ## Usage
-##javascript
+`javascript`
 **Example import**
+```
 import { ButtonView, CornerTextView, LoadingView } from 'react-native-carrot-design';
+```
 
 **ButtonView:**
 All you need is to import { ButtonView } from the react-native-carrot-design module and then use the <ButtonView/> tag.
+```
 import React, { Component } from 'react';
 import { ButtonView } from 'react-native-carrot-design';
-```
+...
 <ButtonView activeOpacity={0.6} btnTitleStyle={{color:'blue',fontSize:19}} 
      btnViewStyle={{backgroundColor:'red'}} title='自定义按钮' onPressCallback={()=>{
           alert('pressBtn!');
      }}>
 </ButtonView>
+...
 ```
 
 **CornerTextView:**
