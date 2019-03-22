@@ -65,6 +65,6 @@ this.Loading.close();
 
 [CornerTextView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md)
 
-[LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md)
+[LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/LoadingView.md)
 
   
