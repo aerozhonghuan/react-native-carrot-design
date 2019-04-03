@@ -14,6 +14,8 @@ import LoadingView from './src/LoadingView';
 
 import TextInputView from './src/TextInputView';
 
+import AlertView from './src/AlertView';
+
 export {
-    ButtonView, CornerTextView, LoadingView, TextInputView,
+    ButtonView, CornerTextView, LoadingView, TextInputView, AlertView,
 };

@@ -41,6 +41,88 @@ declare module 'react-native-carrot-design' {
         close(): void;
     }
 
+    /****** AlertViewProps ******/
+    export interface AlertViewProps {
+        /**
+         * 可选(默认距离屏幕左右30)
+         * 设置弹窗宽度
+         */
+        alertWidth?: number,
+        /**
+         * 可选(默认#FE2842)
+         * 设置确认按钮颜色
+         */
+        mainColor?: string,
+        /**
+         * 可选,不填写则不显示标题
+         * 设置标题文案
+         */
+        title?: string,
+        /**
+         * 可选,不填写则不显示文本内容区域
+         * 设置内容区域文案
+         */
+        content?: string,
+        /**
+         * 可选,不填写则不显示确认按钮
+         * 设置确认按钮文案
+         */
+        okText?: string,
+        /**
+         * 可选,不填写则不显示取消按钮
+         * 设置取消按钮文案
+         */
+        cancelText?: string,
+        /**
+         * 可选,默认为文本类型
+         * 设置内容区域类型,暂分为输入框和文本类型,AlertView.DialogType.INPUT(输入框) AlertView.DialogType.TEXT(文本)
+         */
+        contentType?: string,
+        /**
+         * 可选
+         * 如果为输入类型,可控制输入最大长度
+         */
+        alertInputMaxLength?: number,
+        /**
+         * 可选
+         * 如果为输入类型,可获取input回调的文案
+         */
+        alertCallback?: () => void,
+        /**
+         * 可选
+         * 确认按钮点击事件
+         */
+        onOk?: () => void,
+        /**
+         * 可选
+         * 取消按钮点击事件
+         */
+        onCancel?: () => void,
+        /**
+         * 可选
+         * 自定义view
+         */
+        customContentView?: () => void,
+        /**
+         * 可选
+         * 点击空白区域是否可以隐藏alert
+         */
+        isHideOnTouchOutside?: boolean,
+        /**
+         * 可选(Android可用)
+         * 点击back键是否隐藏alert
+         */
+        isHideOnBackkey?: boolean,
+    }
+
+    export class AlertView extends Component<AlertViewProps> {
+        /**
+         * 控制alert显示隐藏
+         * @param visible
+         */
+        setAlertVisible(visible:boolean): void;
+    }
+
      /****** TextInputViewProps ******/
      export interface TextInputViewProps {
         /** Value: float from 0 to 1.0 */

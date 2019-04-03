@@ -10,7 +10,7 @@ This is the React Native custom UI components library, It's components for andro
 `javascript`
 **Example import**
 ```
-import { ButtonView, CornerTextView, LoadingView } from 'react-native-carrot-design';
+import { ButtonView, CornerTextView, LoadingView, AlertView } from 'react-native-carrot-design';
 ```
 
 **ButtonView:**
@@ -50,6 +50,9 @@ render() {
  }
   ...
   
+```
+```
+  
 //TODO:Call show() when you want to show loading
 this.Loading.show();
   
@@ -60,11 +63,52 @@ this.Loading.close();
   
 ```
 
+**AlertView**
+
+```
+...
+render() {
+    return (
+      <View style={styles.container}>
+        ...
+        <AlertView
+            title="修改姓名"
+            contentType={AlertView.DialogType.INPUT}
+            content="请输入姓名"
+            mainColor="red"
+            alertCallback={(text) => {
+                newUserName = text;
+            }}
+            okText="确定啦"
+            cancelText="取消"
+            onOk={() => {
+                this.alertView.setAlertVisible(false);
+            }}
+            onCancel={() => {
+                this.alertView.setAlertVisible(false);
+                newUserName = '';
+            }}
+            ref={(alertView) => {
+                this.alertView = alertView;
+            }}
+        />
+      </View>
+    );
+ }
+...
+```
+```
+//TODO:Call setAlertVisible() when you want to set the display of the alert
+this.alertView.setAlertVisible(visible:boolean);
+```
+
 ## More detailed subcomponent documentation
 [ButtonView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/ButtonView.md)
 
 [CornerTextView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CornerTextView.md)
 
 [LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/LoadingView.md)
+
+[AlertView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/AlertView.md)
 
   

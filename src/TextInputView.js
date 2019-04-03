@@ -4,9 +4,10 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
-    Dimensions
+    Dimensions,
 } from 'react-native';
 import PropTypes from 'prop-types';
+
 const { width } = Dimensions.get('window');
 const inputHeight = 45;
 const styles = StyleSheet.create({
