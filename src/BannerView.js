@@ -332,7 +332,7 @@ export default class BannerView extends Component {
   }
 }
 // 属性
-CarrotBanner.defaultProps = {
+BannerView.defaultProps = {
   pageIndexNormalColor: '#E8E8E8',
   pageIndexSelectColor: 'orange',
   bannerCache: 'default',
@@ -346,7 +346,7 @@ CarrotBanner.defaultProps = {
   bannerImageStyle: {},
   pageIndexViewMoreStyle: {},
 };
-CarrotBanner.propTypes = {
+BannerView.propTypes = {
   // 点击事件
   onPressCallback: PropTypes.func,
   // 0 表示用 • 1表示用图片替代
