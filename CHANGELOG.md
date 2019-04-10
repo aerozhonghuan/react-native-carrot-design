@@ -1,5 +1,9 @@
 ### Changelog
 
+####v1.0.9 
+date: 2019-4-10
+*  Add BannerView export, which can customize styles.
+
 ####v1.0.8 
 date: 2019-4-10
 *  Add BannerView, which can customize styles.
