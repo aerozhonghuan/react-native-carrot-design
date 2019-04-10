@@ -101,6 +101,41 @@ render() {
 //TODO:Call setAlertVisible() when you want to set the display of the alert
 this.alertView.setAlertVisible(visible:boolean);
 ```
+**BannerView**
+
+```
+render() {
+        return (
+            <View style={styles.container}>
+                {/* <BannerView */}
+                {/* duration={2000} */}
+                {/* pageIndexType={1} */}
+                {/* pageIndexNormalImg={normalIcon} */}
+                {/* pageIndexSelectImg={selectIcon} */}
+                {/* bannerDefaultImg={defaultIcon} */}
+                {/* bannerCache="force-cache" */}
+                {/* bannerData={ImageData} */}
+                {/* bannerKey="img" */}
+                {/* onPressCallback={item => this.touchBanner(item)} */}
+                {/* /> */}
+                <BannerView
+                    pageIndexType={0}
+                    pageIndexNormalColor="#E8E8E8"
+                    pageIndexSelectColor="tomato"
+                    bannerDefaultImg={defaultIcon}
+                    bannerStyle={{ width, height: 100 }}
+                    bannerImageStyle={{ width, height: 100 }}
+                    pageIndexViewMoreStyle={{ width, height: 25 }}
+                    bannerData={ImageData}
+                    bannerKey="img"
+                    onPressCallback={item => this.touchBanner(item)}
+                />
+            </View>
+            
+        touchBanner = (item) => {
+             console.log(`数据-打印：${item.index}`);
+        }
+```
 
 ## More detailed subcomponent documentation
 [ButtonView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/ButtonView.md)
@@ -110,5 +145,7 @@ this.alertView.setAlertVisible(visible:boolean);
 [LoadingView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/LoadingView.md)
 
 [AlertView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/AlertView.md)
+
+[BannerView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/BannerView.md)
 
   

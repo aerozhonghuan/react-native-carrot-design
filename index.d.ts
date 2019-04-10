@@ -6,6 +6,8 @@
  * @LastEditTime: 2019-03-22 18:09:14
  */
 
+import {BannerViewProps, TextInputViewProps} from "react-native-carrot-design";
+
 declare module 'react-native-carrot-design' {
     import { ViewStyle } from 'react-native'
     import { Component } from 'react'
@@ -152,5 +154,72 @@ declare module 'react-native-carrot-design' {
         onChangeText?: (text: string) => void,
     }
     export class TextInputView extends Component<TextInputViewProps, any> {
+    }
+
+    /****** BannerViewProps ******/
+    export interface BannerViewProps {
+        /**
+         * 点击banner 返回当前banner索引
+         * @param {number} index
+         */
+        onPressCallback?: (index: number) => void,
+        /**
+         * 0 表示用 • 1表示用图片替代
+         */
+        pageIndexType: number,
+        /**
+         * 未选中时 页面指示器的颜色
+         */
+        pageIndexNormalColor?: string,
+        /**
+         * 选中时 页面指示器的颜色
+         */
+        pageIndexSelectColor?: string,
+        /**
+         * 未选中时 页面指示器的图片
+         */
+        pageIndexNormalImg?: any,
+        /**
+         * 选中时 页面指示器的图片
+         */
+        pageIndexSelectImg?: any,
+        /**
+         * 每隔多少秒执行一次（单位是毫秒）
+         */
+        duration?: number,
+        /**
+         * 默认图片
+         */
+        bannerDefaultImg?: any,
+        /**
+         * banner的数据源
+         */
+        bannerData: object,
+        /**
+         * 取banner图片的key
+         */
+        bannerKey:string,
+        /**
+         * banner cache策略
+         */
+        bannerCache?: string,
+        /**
+         * 容器的布局
+         */
+        bannerStyle?:ViewStyle,
+        /**
+         * banner图片布局
+         */
+        bannerImageStyle?:ViewStyle,
+        /**
+         * 页面指示器的布局
+         */
+        pageIndexViewMoreStyle?:ViewStyle,
+        /**
+         * 页面指示器图标的布局
+         */
+        pageIndexMoreStyle?:ViewStyle,
+    }
+    export class BannerView extends Component<BannerViewProps, any> {
     }
 }
