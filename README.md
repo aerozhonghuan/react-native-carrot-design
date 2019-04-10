@@ -146,6 +146,6 @@ render() {
 
 [AlertView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/AlertView.md)
 
-[BannerView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/BannerView.md)
+[BannerView doc](https://github.com/aerozhonghuan/react-native-carrot-design/blob/develop/docs/BannerView.md)
 
   
