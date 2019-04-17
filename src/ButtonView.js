@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 17:45:01
- * @LastEditTime: 2019-03-14 11:20:43
+ * @LastEditTime: 2019-04-17 16:41:43
  */
 import React, { PureComponent } from 'react';
 import {
@@ -43,7 +43,7 @@ export default class ButtonView extends PureComponent {
     };
 
     static defaultProps = {
-        activeOpacity: 0.8,
+        activeOpacity: 0.2,
         disabled: false,
         btnTitleStyle: null,
         btnViewStyle: null,

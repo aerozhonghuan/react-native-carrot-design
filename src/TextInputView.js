@@ -1,3 +1,11 @@
+/*
+ * @Description: TextInputView, which can customize styles
+ * @Author: wanglh
+ * @LastEditors: wanglh
+ * @Date: 2019-04-03 19:32:20
+ * @LastEditTime: 2019-04-17 17:47:42
+ */
+
 import React, { PureComponent } from 'react';
 import {
     StyleSheet,
