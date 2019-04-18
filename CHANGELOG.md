@@ -1,6 +1,10 @@
 ### Changelog
 
-####v1.0.9 
+####v1.1.0 
+date: 2019-4-18
+*  Add CollectionView, which can customize styles.
+
+####v1.0.10 
 date: 2019-4-10
 *  Add BannerView export, which can customize styles.
 

@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 18:02:58
- * @LastEditTime: 2019-04-17 17:45:14
+ * @LastEditTime: 2019-04-18 11:27:15
  */
 
 import { BannerViewProps, TextInputViewProps } from "react-native-carrot-design";
@@ -450,18 +450,15 @@ declare module 'react-native-carrot-design' {
         renderEmptyComponent?: React.ReactElement | null,
 
         /**
-         * Makes the sections headers sticky. The sticky behavior means that it will scroll with the
-         * content at the top of the section until it reaches the top of the screen, at which point it
-         * will stick to the top until it is pushed off the screen by the next section header. This
-         * property is not supported in conjunction with `horizontal={true}`. Only enabled by default
-         * on iOS because of typical platform standards.
+         * Makes section headers stick to the top of the screen until the next one pushes it off.
+         * Only enabled by default on iOS because that is the platform standard there.
          */
         stickySectionHeadersEnabled: PropTypes.bool,
 
         /**
          * How many items to render in the initial batch
          */
-        initialNumToRender: PropTypes.number.isRequired,
+        initialNumToRender?: PropTypes.number,
 
         /**
          * Called once when the scroll position gets within onEndReachedThreshold of the rendered content.

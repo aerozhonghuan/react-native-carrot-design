@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-17 10:38:22
- * @LastEditTime: 2019-04-17 17:55:36
+ * @LastEditTime: 2019-04-18 11:32:24
  */
 import React, { Component } from 'react';
 import {
@@ -38,14 +38,14 @@ export default class CollectionView extends Component {
         renderFooterComponent: PropTypes.func,
         renderEmptyComponent: PropTypes.func,
         stickySectionHeadersEnabled: PropTypes.bool, // 分组头部是否吸顶,ios默认为true;Android默认为false
-        initialNumToRender: PropTypes.number.isRequired, // 指定一开始渲染的元素数量，最好刚刚够填满一个屏幕
+        initialNumToRender: PropTypes.number, // 指定一开始渲染的元素数量，最好刚刚够填满一个屏幕
         onEndReached: PropTypes.func,
         onEndReachedThreshold: PropTypes.number, // 0.5表示距离内容最底部的距离为当前列表可见长度的一半时触发
         inverted: PropTypes.bool,
     };
 
     static defaultProps = {
-        headerSource: [],
+        headerSource: undefined,
         sectionStyle: undefined,
         itemStyle: undefined,
         renderSectionHeader: undefined,
@@ -56,6 +56,7 @@ export default class CollectionView extends Component {
         renderFooterComponent: undefined,
         renderEmptyComponent: undefined,
         stickySectionHeadersEnabled: true,
+        initialNumToRender: undefined,
         onEndReached: undefined,
         onEndReachedThreshold: 0.3,
         inverted: false,
