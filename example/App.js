@@ -1,49 +1,67 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React from 'react';
+import {
+    createAppContainer,
+    createStackNavigator,
+} from 'react-navigation';
+import { StackViewStyleInterpolator } from
+    'react-navigation-stack';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import HomeScreen from './demo/screens/HomeScreen';
+import { MAINSCREENS, COLLECTIONS } from './demoList';
+import { Color, FontSize } from './demo/style/CommonStyles';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
-  }
+export default function App() {
+    return <AppContainer />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+const getOptions = title => ({
+    title,
+    headerStyle: {
+        backgroundColor: Color.navBgColor,
+    },
+    gestureResponseDistance: {
+        horizontal: 300,
+    },
+    headerTitleStyle: {
+        color: Color.navTintColor,
+        // 设置标题的大小
+        fontSize: FontSize.navTitleSize,
+        // 居中显示
+        alignSelf: 'center',
+    },
+    headerTintColor: 'white', // 导航栏标题颜色以及返回按钮颜色
 });
+
+const scenes = {
+    Home: {
+        screen: HomeScreen,
+        navigationOptions: getOptions('Welcome to Carrot Design'),
+    },
+};
+
+/**
+ * 页面过度 动画
+ * @returns {{screenInterpolator: function(*=)}}
+ * @constructor
+ */
+const TransitionConfiguration = () => ({
+    screenInterpolator: (sceneProps) => {
+        const { scene } = sceneProps;
+        const { route } = scene;
+        const params = route.params || {};
+        const transition = params.transition || 'forHorizontal';
+        return StackViewStyleInterpolator[transition](sceneProps);
+    },
+});
+
+// eslint-disable-next-line array-callback-return
+[...MAINSCREENS, ...COLLECTIONS].map((component) => {
+    const Module = component.module.default;
+    scenes[component.name] = {
+        screen: Module,
+        navigationOptions: getOptions(component.name),
+    };
+});
+
+const RootNavigator = createStackNavigator(scenes, { transitionConfig: TransitionConfiguration });
+const AppContainer = createAppContainer(RootNavigator);

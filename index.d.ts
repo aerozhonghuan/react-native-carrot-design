@@ -3,10 +3,10 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 18:02:58
- * @LastEditTime: 2019-04-18 11:27:15
+ * @LastEditTime: 2019-04-19 16:20:15
  */
 
-import { BannerViewProps, TextInputViewProps } from "react-native-carrot-design";
+// import { BannerViewProps, TextInputViewProps } from "react-native-carrot-design";
 
 declare module 'react-native-carrot-design' {
     import { ViewStyle, SectionListScrollParams, NativeSyntheticEvent, TextInputEndEditingEventData } from 'react-native'
