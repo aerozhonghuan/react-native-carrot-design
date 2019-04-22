@@ -1,6 +1,7 @@
 import {
     Dimensions,
 } from 'react-native';
+
 export const Color = {
     mainColor: '#FF6A6A',
     navBgColor: '#FF6A6A',

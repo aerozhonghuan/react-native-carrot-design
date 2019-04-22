@@ -1,3 +1,11 @@
+/*
+ * @Description: root component
+ * @Author: wanglh
+ * @LastEditors: wanglh
+ * @Date: 2019-04-18 16:08:45
+ * @LastEditTime: 2019-04-22 13:45:48
+ */
+
 import React from 'react';
 import {
     createAppContainer,
