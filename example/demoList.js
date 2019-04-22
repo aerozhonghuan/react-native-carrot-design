@@ -32,6 +32,12 @@ export const MAINSCREENS = [
         description: 'banner展示',
         module: require('./src/screens/BannerView'),
     },
+    {
+        name: 'PictureBrowserView',
+        title: 'PictureBrowserView',
+        description: 'PictureBrowserView展示',
+        module: require('./src/screens/PictureBrowserView'),
+    },
 ];
 
 // 二级页面

@@ -264,5 +264,5 @@ render() {
 
 [CollectionView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CollectionView.md)
 
-[PictureBrowserView doc](https://github.com/aerozhonghuan/react-native-carrot-design/blob/develop/docs/PictureBrowserView.md)
+[PictureBrowserView doc](https://github.com/aerozhonghuan/react-native-carrot-design/blob/master/docs/PictureBrowserView.md)
  
