@@ -1,4 +1,7 @@
 ### Changelog
+####v1.1.3
+date: 2019-4-22
+*  Optimize CollectionView.
 
 ####v1.1.2
 date: 2019-4-22
