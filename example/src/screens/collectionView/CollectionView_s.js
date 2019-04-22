@@ -10,14 +10,14 @@ import {
 
 import { CollectionView } from 'react-native-carrot-design';
 
-// const { width } = Dimensions.get('window');
-// const cols = 3; // 子item默认列数
-// const columnSpacing = 15; // 子item列间距
-// const rowSpacing = 10; // 子item行间距
-// const cellW = (width - columnSpacing * (cols + 1)) / cols; // 子item宽
-// const cellH = cellW; // 子item高
+const { width } = Dimensions.get('window');
+const cols = 3; // 子item默认列数
+const columnSpacing = 15; // 子item列间距
+const rowSpacing = 10; // 子item行间距
+const cellW = (width - columnSpacing * (cols + 1)) / cols; // 子item宽
+const cellH = cellW; // 子item高
 
-const headerSource = [{ title: '第一组的header' }, { title: '第二组的header' }];
+const headerSource = [{ title: '生产调试' }, { title: '运输扫描' }];
 const dataSource = [[
     {
         key: '第一组--第一个item',
@@ -192,7 +192,7 @@ const dataSource = [[
     },
 ]
 ];
-export default class CollectionView_f extends Component {
+export default class CollectionView_s extends Component {
 
     constructor(props) {
         super(props)

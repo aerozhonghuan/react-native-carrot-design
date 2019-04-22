@@ -1,3 +1,11 @@
+/*
+ * @Description: config of all screens
+ * @Author: wanglh
+ * @LastEditors: wanglh
+ * @Date: 2019-04-18 17:28:56
+ * @LastEditTime: 2019-04-22 13:47:44
+ */
+
 // 一级页面  demo列表
 export const MAINSCREENS = [
     {
