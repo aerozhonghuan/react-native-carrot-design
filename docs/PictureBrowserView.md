@@ -139,14 +139,14 @@ render() {
 ## Properties
 | Prop   | Default  | Type | Description | Required|
 | :------------ |:---------------:| :---------------:|  :---------------:|:-----|
-| onPressCallback | none | `func` | Click event |  `false `|
-| currentTapIndex | none | `func` | 0 means use `•`; 1 to replace the picture |  `true `|
-| modalVisible | `false` | `bool` | Default when pageIndexType == 0 |  `false `|
-| onSaveCallback | none | `string` | LongPress event |  `false `|
-| isHideSavePhotoView | none | `bool` | pageIndexType == 1 when the default image |  `false `|
+| onPressCallback | none | `func` | Click event to exit image browsing event |  `false `|
+| currentTapIndex | none | `func` | Currently displayed image index |  `true `|
+| modalVisible | `false` | `bool` | Whether to show the image browser |  `false `|
+| onSaveCallback | none | `string` | Saved image to local long press event |  `false `|
+| isHideSavePhotoView | none | `bool` | Whether to hide the saved image to the local popup window |  `false `|
 | browserDefaultImg | `require('../assets/images/img_bannerDefualt.png')` | `any` | Default image|  `false `|
-| browserNameKey | none | `string` | if want to show photo title , it`s the key |  `false `|
-| browserData | none | `object` | Banner data source |  `true `|
-| browserKey | none | `string` | Banner image key |  `true `|
-| browserCache | `default` | `string` | Banner cache strategy |  `false `|
+| browserNameKey | none | `string` | Key of picture viewer image title |  `false `|
+| browserData | none | `object` | Image browser data source |  `true `|
+| browserKey | none | `string` | Key of picture browser image resource |  `true `|
+| browserCache | `default` | `string` | Cache strategy |  `false `|
 | browserStyle | none | `object` | Container layout |  `false `|
