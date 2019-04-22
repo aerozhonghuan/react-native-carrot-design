@@ -10,12 +10,12 @@ import {
 
 import { CollectionView } from 'react-native-carrot-design';
 
-// const { width } = Dimensions.get('window');
-// const cols = 3; // 子item默认列数
-// const columnSpacing = 15; // 子item列间距
-// const rowSpacing = 10; // 子item行间距
-// const cellW = (width - columnSpacing * (cols + 1)) / cols; // 子item宽
-// const cellH = cellW; // 子item高
+const { width } = Dimensions.get('window');
+const cols = 3; // 子item默认列数
+const columnSpacing = 15; // 子item列间距
+const rowSpacing = 10; // 子item行间距
+const cellW = (width - columnSpacing * (cols + 1)) / cols; // 子item宽
+const cellH = cellW; // 子item高
 
 const headerSource = [{ title: '第一组的header' }, { title: '第二组的header' }];
 const dataSource = [[
