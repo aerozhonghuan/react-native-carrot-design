@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-18 17:28:56
- * @LastEditTime: 2019-04-22 13:47:44
+ * @LastEditTime: 2019-04-22 17:42:38
  */
 
 // 一级页面  demo列表
@@ -32,21 +32,21 @@ export const MAINSCREENS = [
 // CollectionView
 export const COLLECTIONS = [
     {
-        name: 'CollectionView_f',
+        name: 'CollectionViewF',
         title: '九宫格',
         description: '经典九宫格',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        module: require('./src/screens/collectionView/CollectionViewF'),
     },
     {
-        name: 'CollectionView_s',
+        name: 'CollectionViewS',
         title: '九宫格',
-        description: '自定义item排列方式',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        description: '更多属性',
+        module: require('./src/screens/collectionView/CollectionViewS'),
     },
     {
-        name: 'CollectionView_t',
+        name: 'CollectionViewT',
         title: '九宫格',
         description: '某个section数据为空或其header为空',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        module: require('./src/screens/collectionView/CollectionViewT'),
     },
 ];
