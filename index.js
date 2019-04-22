@@ -20,6 +20,8 @@ import BannerView from './src/BannerView';
 
 import CollectionView from './src/CollectionView';
 
+import PictureBrowserView from './src/PictureBrowserView/PictureBrowserView';
+
 export {
     ButtonView,
     CornerTextView,
@@ -28,4 +30,5 @@ export {
     AlertView,
     BannerView,
     CollectionView,
+    PictureBrowserView,
 };

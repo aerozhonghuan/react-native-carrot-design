@@ -22,7 +22,9 @@
     "buttonview",
     "button",
     "text",
-    "banner"
+    "banner",
+    "picture",
+    "browser"
   ],
   "repository": {
     "type": "git",
