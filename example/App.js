@@ -6,9 +6,9 @@ import {
 import { StackViewStyleInterpolator } from
     'react-navigation-stack';
 
-import HomeScreen from './demo/screens/HomeScreen';
+import HomeScreen from './src/screens/HomeScreen';
 import { MAINSCREENS, COLLECTIONS } from './demoList';
-import { Color, FontSize } from './demo/style/CommonStyles';
+import { Color, FontSize } from './src/style/CommonStyles';
 
 export default function App() {
     return <AppContainer />;
