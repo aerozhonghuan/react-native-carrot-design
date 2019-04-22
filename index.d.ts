@@ -322,68 +322,119 @@ declare module 'react-native-carrot-design' {
     /****** BannerViewProps ******/
     export interface BannerViewProps {
         /**
-         * 点击banner 返回当前banner索引
+         * Click banner to return the current banner index.
          * @param {number} index
          */
         onPressCallback?: (index: number) => void,
         /**
-         * 0 表示用 • 1表示用图片替代
+         * 0 means use • 1 to replace the picture
          */
         pageIndexType: number,
         /**
-         * 未选中时 页面指示器的颜色
+         * When not selected, the color of the page indicator
          */
         pageIndexNormalColor?: string,
         /**
-         * 选中时 页面指示器的颜色
+         * When selected, the color of the page indicator
          */
         pageIndexSelectColor?: string,
         /**
-         * 未选中时 页面指示器的图片
+         * Picture of page indicator when unchecked
          */
         pageIndexNormalImg?: any,
         /**
-         * 选中时 页面指示器的图片
+         * Picture of the page indicator when selected
          */
         pageIndexSelectImg?: any,
         /**
-         * 每隔多少秒执行一次（单位是毫秒）
+         * Execute every few seconds (in milliseconds)
          */
         duration?: number,
         /**
-         * 默认图片
+         * Default picture
          */
         bannerDefaultImg?: any,
         /**
-         * banner的数据源
+         * Banner data source
          */
         bannerData: object,
         /**
-         * 取banner图片的key
+         * Take the key of the banner picture
          */
         bannerKey: string,
         /**
-         * banner cache策略
+         * Banner cache strategy
          */
         bannerCache?: string,
         /**
-         * 容器的布局
+         * Container layout
          */
         bannerStyle?: ViewStyle,
         /**
-         * banner图片布局
+         * Banner image layout
          */
         bannerImageStyle?: ViewStyle,
         /**
-         * 页面指示器的布局
+         * Page indicator layout
          */
         pageIndexViewMoreStyle?: ViewStyle,
         /**
-         * 页面指示器图标的布局
+         * Page indicator icon layout
          */
         pageIndexMoreStyle?: ViewStyle,
     }
     export class BannerView extends Component<BannerViewProps, any> {
+    }
+
+    /****** PictureBrowserViewProps ******/
+    export interface PictureBrowserViewProps {
+        /**
+         * Click event to exit image browsing event
+         * @param {number} index
+         */
+        onPressCallback?: (index: number) => void,
+        /**
+         * Currently displayed image index
+         */
+        currentTapIndex: number,
+        /**
+         * Whether to show the image browser
+         */
+        modalVisible: boolean,
+        /**
+         * Saved image to local long press event
+         */
+        onSaveCallback?: (index: number) => void,
+        /**
+         * Whether to hide the saved image to the local popup window
+         */
+        isHideSavePhotoView: boolean,
+        /**
+         * Default picture
+         */
+        browserDefaultImg?: any,
+        /**
+         * Image browser data source
+         */
+        browserData: object,
+        /**
+         * Key of picture browser image resource
+         */
+        browserKey: string,
+        /**
+         * Key of picture viewer image title
+         */
+        browserNameKey?: string,
+        /**
+         * Cache strategy
+         */
+        browserCache?: string,
+        /**
+         * Container layout
+         */
+        browserStyle?: ViewStyle,
+    }
+    export class PictureBrowserView extends Component<PictureBrowserViewProps, any> {
     }
 
     /****** CollectionViewProps ******/

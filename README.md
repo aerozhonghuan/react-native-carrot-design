@@ -233,6 +233,23 @@ render() {
     return (<Text style={styles.listEmpty}>sectionEmptyComponent</Text>)
   }
   ```
+**PictureBrowserView**
+```
+render() {
+        return (
+            <View style={styles.container}>
+               <PictureBrowserView
+                                 modalVisible={showPic}
+                                 browserData={ImageData}
+                                 browserKey="img"
+                                 browserNameKey="title1"
+                                 isHideSavePhotoView={showSaveAlter}
+                                 currentTapIndex={currentIndex}
+                                 onSaveCallback={item => this.savePic(item)}
+                                 onPressCallback={item => this.touchPic(item)}
+                             /> 
+            </View>
+```
 
 ## More detailed subcomponent documentation
 [ButtonView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/ButtonView.md)
@@ -247,4 +264,5 @@ render() {
 
 [CollectionView doc](https://github.com/rocket-developer/react-native-carrot-design/blob/master/docs/CollectionView.md)
 
-  
+[PictureBrowserView doc](https://github.com/aerozhonghuan/react-native-carrot-design/blob/master/docs/PictureBrowserView.md)
+ 

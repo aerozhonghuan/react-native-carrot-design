@@ -1,5 +1,13 @@
 ### Changelog
 
+####v1.1.2
+date: 2019-4-22
+*  Add PictureBrowserView, which can customize styles.
+
+####v1.1.1
+date: 2019-4-22
+*  Add PictureBrowserView, which can customize styles.
+
 ####v1.1.0 
 date: 2019-4-18
 *  Add CollectionView, which can customize styles.

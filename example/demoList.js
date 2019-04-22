@@ -26,6 +26,18 @@ export const MAINSCREENS = [
         description: '九宫格',
         module: require('./src/screens/collectionView/CollectionViewDemo'),
     },
+    {
+        name: 'BannerView',
+        title: 'BannerView',
+        description: 'banner展示',
+        module: require('./src/screens/BannerView'),
+    },
+    {
+        name: 'PictureBrowserView',
+        title: 'PictureBrowserView',
+        description: 'PictureBrowserView展示',
+        module: require('./src/screens/PictureBrowserView'),
+    },
 ];
 
 // 二级页面
