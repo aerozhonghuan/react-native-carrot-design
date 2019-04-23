@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-17 10:38:22
- * @LastEditTime: 2019-04-23 14:18:51
+ * @LastEditTime: 2019-04-23 14:59:14
  */
 import React, { Component } from 'react';
 import {
@@ -106,6 +106,7 @@ export default class CollectionView extends Component {
     constructor(props) {
         super(props);
         const { headerSource, dataSource } = props;
+        collectionDataArr = [];
         CollectionView.handleDataSource(headerSource, dataSource);
         this.state = {
             dataSource: collectionDataArr,

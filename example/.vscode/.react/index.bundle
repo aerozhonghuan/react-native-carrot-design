@@ -111921,7 +111921,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     module: _$$_REQUIRE(_dependencyMap[6], "./src/screens/collectionView/CollectionViewT")
   }];
   exports.COLLECTIONS = COLLECTIONS;
-},698,[699,709,720,711,713,715,717],"demoList.js");
+},698,[699,709,710,711,713,715,717],"demoList.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -112087,6 +112087,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return _CollectionView.default;
     }
   });
+  Object.defineProperty(exports, "PictureBrowserView", {
+    enumerable: true,
+    get: function get() {
+      return _PictureBrowserView.default;
+    }
+  });
 
   var _ButtonView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./src/ButtonView"));
 
@@ -112101,7 +112107,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _BannerView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "./src/BannerView"));
 
   var _CollectionView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./src/CollectionView"));
-},700,[1,701,702,703,704,705,706,708],"node_modules/react-native-carrot-design/index.js");
+
+  var _PictureBrowserView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./src/PictureBrowserView/PictureBrowserView"));
+},700,[1,701,702,703,704,705,706,708,719],"node_modules/react-native-carrot-design/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -114093,6 +114101,210 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/possibleConstructorReturn"));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits"));
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[8], "react-native");
+
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[9], "../../style/CommonStyles");
+
+  var _demoList = _$$_REQUIRE(_dependencyMap[10], "../../../demoList");
+
+  var _temp,
+      _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/collectionView/CollectionView.js";
+
+  var _components = {
+    CollectionViewDemo: {
+      displayName: "CollectionViewDemo"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "src/screens/collectionView/CollectionView.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var CollectionViewDemo = _wrapComponent("CollectionViewDemo")((_temp = function (_React$Component) {
+    (0, _inherits2.default)(CollectionViewDemo, _React$Component);
+
+    function CollectionViewDemo(props) {
+      var _this;
+
+      (0, _classCallCheck2.default)(this, CollectionViewDemo);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CollectionViewDemo).call(this, props));
+
+      _this.renderRow = function (_ref) {
+        var item = _ref.item,
+            separators = _ref.separators;
+        return _react.default.createElement(_reactNative.TouchableOpacity, {
+          onShowUnderlay: separators.highlight,
+          onHideUnderlay: separators.unhighlight,
+          activeOpacity: 0.8,
+          onPress: function onPress() {
+            _this.goDemo(item);
+          },
+          style: styles.actionsInfo,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25
+          }
+        }, _react.default.createElement(_reactNative.View, {
+          style: styles.actionInfoCell,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.actionInfoKey,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          }
+        }, item.title), _react.default.createElement(_reactNative.Text, {
+          style: styles.actionInfoValue,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          }
+        }, item.description)));
+      };
+
+      _this.goDemo = function (item) {
+        var navigation = _this.props.navigation;
+        navigation.navigate(item.name, {
+          title: item.title
+        });
+      };
+
+      _this.emptyComponent = function () {
+        return _react.default.createElement(_reactNative.View, {
+          style: styles.listEmptyComponent,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          }
+        }, "\u5F00\u53D1\u8005\u5077\u61D2\u4E86\uFF0C\u8FD8\u6CA1\u6709\u6DFB\u52A0demo\u54E6~"));
+      };
+
+      _this.state = {
+        actionsSource: _demoList.COLLECTIONS
+      };
+      return _this;
+    }
+
+    (0, _createClass2.default)(CollectionViewDemo, [{
+      key: "render",
+      value: function render() {
+        var actionsSource = this.state.actionsSource;
+        return _react.default.createElement(_reactNative.SafeAreaView, {
+          style: styles.safeAreaStyle,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          }
+        }, _react.default.createElement(_reactNative.FlatList, {
+          horizontal: false,
+          data: actionsSource,
+          extraData: this.state,
+          keyExtractor: function keyExtractor(item) {
+            return item.name;
+          },
+          renderItem: this.renderRow,
+          ListEmptyComponent: this.emptyComponent,
+          onEndReachedThreshold: 1,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          }
+        }));
+      }
+    }]);
+    return CollectionViewDemo;
+  }(_react.default.Component), _temp));
+
+  var _default2 = CollectionViewDemo;
+  exports.default = _default2;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: _CommonStyles.Color.bgColor
+    },
+    safeAreaStyle: {
+      flex: 1,
+      backgroundColor: _CommonStyles.Color.bgColor
+    },
+    actionsInfo: {
+      height: _CommonStyles.ConstWH.cellHeight,
+      paddingLeft: _CommonStyles.Padding.containerPadding,
+      paddingRight: _CommonStyles.Padding.containerPadding,
+      backgroundColor: _CommonStyles.Color.containerBg,
+      borderColor: _CommonStyles.Color.lineColor,
+      borderBottomWidth: 0.5
+    },
+    rowText: {
+      height: _CommonStyles.ConstWH.cellHeight,
+      lineHeight: _CommonStyles.ConstWH.cellHeight,
+      color: _CommonStyles.Color.mainTextColor
+    },
+    actionInfoCell: {
+      flexDirection: 'row',
+      height: _CommonStyles.ConstWH.cellHeight,
+      lineHeight: _CommonStyles.ConstWH.cellHeight,
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      fontSize: _CommonStyles.FontSize.mainTextSize
+    },
+    actionInfoKey: {
+      color: _CommonStyles.Color.textColor
+    },
+    actionInfoValue: {
+      marginLeft: _CommonStyles.Margin.containerMargin,
+      color: _CommonStyles.Color.placehoderColor
+    },
+    listEmptyComponent: {
+      flex: 1,
+      marginTop: 99,
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: _CommonStyles.Color.placehoderColor,
+      flexDirection: 'column',
+      backgroundColor: _CommonStyles.Color.grayContainerBg
+    }
+  });
+},710,[1,22,23,36,39,42,53,197,2,697,698],"src/screens/collectionView/CollectionView.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
 
   Object.defineProperty(exports, "__esModule", {
@@ -115197,17 +115409,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       color: '#333333',
       height: 33,
       fontSize: 13,
-      width: _reactNative.Dimensions.width,
       textAlign: 'center'
     },
     sectionViewStyle: {
       flexDirection: 'column',
       flexWrap: 'nowrap'
     },
-    itemViewStyle: {
-      margin: 8
-    },
     itemView: {
+      width: _reactNative.Dimensions.width,
       flexDirection: 'row',
       height: 80,
       alignItems: 'center',
@@ -115221,210 +115430,6 @@ __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   "displayName": "example"
 };
 },718,[],"app.json");
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-
-  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/classCallCheck"));
-
-  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/createClass"));
-
-  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/possibleConstructorReturn"));
-
-  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/getPrototypeOf"));
-
-  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits"));
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "react"));
-
-  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./../../../node_modules/react-transform-hmr/lib/index.js"));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[8], "react-native");
-
-  var _CommonStyles = _$$_REQUIRE(_dependencyMap[9], "../../style/CommonStyles");
-
-  var _demoList = _$$_REQUIRE(_dependencyMap[10], "../../../demoList");
-
-  var _temp,
-      _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/collectionView/CollectionView.js";
-
-  var _components = {
-    CollectionViewDemo: {
-      displayName: "CollectionViewDemo"
-    }
-  };
-
-  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
-    filename: "src/screens/collectionView/CollectionView.js",
-    components: _components,
-    locals: [module],
-    imports: [_react.default]
-  });
-
-  function _wrapComponent(id) {
-    return function (Component) {
-      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
-    };
-  }
-
-  var CollectionViewDemo = _wrapComponent("CollectionViewDemo")((_temp = function (_React$Component) {
-    (0, _inherits2.default)(CollectionViewDemo, _React$Component);
-
-    function CollectionViewDemo(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, CollectionViewDemo);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CollectionViewDemo).call(this, props));
-
-      _this.renderRow = function (_ref) {
-        var item = _ref.item,
-            separators = _ref.separators;
-        return _react.default.createElement(_reactNative.TouchableOpacity, {
-          onShowUnderlay: separators.highlight,
-          onHideUnderlay: separators.unhighlight,
-          activeOpacity: 0.8,
-          onPress: function onPress() {
-            _this.goDemo(item);
-          },
-          style: styles.actionsInfo,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25
-          }
-        }, _react.default.createElement(_reactNative.View, {
-          style: styles.actionInfoCell,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33
-          }
-        }, _react.default.createElement(_reactNative.Text, {
-          style: styles.actionInfoKey,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 34
-          }
-        }, item.title), _react.default.createElement(_reactNative.Text, {
-          style: styles.actionInfoValue,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 35
-          }
-        }, item.description)));
-      };
-
-      _this.goDemo = function (item) {
-        var navigation = _this.props.navigation;
-        navigation.navigate(item.name, {
-          title: item.title
-        });
-      };
-
-      _this.emptyComponent = function () {
-        return _react.default.createElement(_reactNative.View, {
-          style: styles.listEmptyComponent,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 48
-          }
-        }, _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 49
-          }
-        }, "\u5F00\u53D1\u8005\u5077\u61D2\u4E86\uFF0C\u8FD8\u6CA1\u6709\u6DFB\u52A0demo\u54E6~"));
-      };
-
-      _this.state = {
-        actionsSource: _demoList.COLLECTIONS
-      };
-      return _this;
-    }
-
-    (0, _createClass2.default)(CollectionViewDemo, [{
-      key: "render",
-      value: function render() {
-        var actionsSource = this.state.actionsSource;
-        return _react.default.createElement(_reactNative.SafeAreaView, {
-          style: styles.safeAreaStyle,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56
-          }
-        }, _react.default.createElement(_reactNative.FlatList, {
-          horizontal: false,
-          data: actionsSource,
-          extraData: this.state,
-          keyExtractor: function keyExtractor(item) {
-            return item.name;
-          },
-          renderItem: this.renderRow,
-          ListEmptyComponent: this.emptyComponent,
-          onEndReachedThreshold: 1,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 57
-          }
-        }));
-      }
-    }]);
-    return CollectionViewDemo;
-  }(_react.default.Component), _temp));
-
-  var _default2 = CollectionViewDemo;
-  exports.default = _default2;
-
-  var styles = _reactNative.StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: _CommonStyles.Color.bgColor
-    },
-    safeAreaStyle: {
-      flex: 1,
-      backgroundColor: _CommonStyles.Color.bgColor
-    },
-    actionsInfo: {
-      height: _CommonStyles.ConstWH.cellHeight,
-      paddingLeft: _CommonStyles.Padding.containerPadding,
-      paddingRight: _CommonStyles.Padding.containerPadding,
-      backgroundColor: _CommonStyles.Color.containerBg,
-      borderColor: _CommonStyles.Color.lineColor,
-      borderBottomWidth: 0.5
-    },
-    rowText: {
-      height: _CommonStyles.ConstWH.cellHeight,
-      lineHeight: _CommonStyles.ConstWH.cellHeight,
-      color: _CommonStyles.Color.mainTextColor
-    },
-    actionInfoCell: {
-      flexDirection: 'row',
-      height: _CommonStyles.ConstWH.cellHeight,
-      lineHeight: _CommonStyles.ConstWH.cellHeight,
-      justifyContent: 'flex-start',
-      alignItems: 'center',
-      fontSize: _CommonStyles.FontSize.mainTextSize
-    },
-    actionInfoKey: {
-      color: _CommonStyles.Color.textColor
-    },
-    actionInfoValue: {
-      marginLeft: _CommonStyles.Margin.containerMargin,
-      color: _CommonStyles.Color.placehoderColor
-    },
-    listEmptyComponent: {
-      flex: 1,
-      marginTop: 99,
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: _CommonStyles.Color.placehoderColor,
-      flexDirection: 'column',
-      backgroundColor: _CommonStyles.Color.grayContainerBg
-    }
-  });
-},720,[1,22,23,36,39,42,53,197,2,697,698],"src/screens/collectionView/CollectionView.js");
 __r(92);
 __r(0);
 //# sourceMappingURL=index.map

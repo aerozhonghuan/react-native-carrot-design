@@ -1,5 +1,9 @@
 ### Changelog
 
+####v1.1.5
+date: 2019-4-23
+*  Fix the problem that the CollectionView data source is not cleared.
+
 ####v1.1.4
 date: 2019-4-23
 *  Optimize the section layout of the CollectionView.

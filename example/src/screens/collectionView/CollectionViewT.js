@@ -210,7 +210,6 @@ const styles = StyleSheet.create({
         color: '#333333',
         height: 33,
         fontSize: 13,
-        width: Dimensions.width,
         textAlign: 'center',
     },
     sectionViewStyle: {
@@ -218,9 +217,12 @@ const styles = StyleSheet.create({
         flexWrap: 'nowrap',
     },
     itemViewStyle: {
+        flexDirection: 'row',
         margin: 8,
     },
     itemView: {
+        flex: 3,
+        width: Dimensions.width,
         flexDirection: 'row',
         height: 80,
         alignItems: 'center',
