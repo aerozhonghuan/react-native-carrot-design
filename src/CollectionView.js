@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-17 10:38:22
- * @LastEditTime: 2019-04-22 18:58:03
+ * @LastEditTime: 2019-04-23 14:18:51
  */
 import React, { Component } from 'react';
 import {
@@ -15,13 +15,12 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-const { width } = Dimensions.get('window');
+const columnSpacing = 8; // 默认子item列间距
 // const cols = 3; // 默认子item列数
-const columnSpacing = 15; // 默认子item列间距
 // const rowSpacing = columnSpacing; // 默认子item行间距
 // const cellW = (width - columnSpacing * (cols + 1)) / cols; // 默认子item宽
 // const cellH = cellW; // 默认子item高
-const data = [];// 数据源
+let collectionDataArr = [];// 数据源
 let styles;
 export default class CollectionView extends Component {
     static propTypes = {
@@ -86,7 +85,7 @@ export default class CollectionView extends Component {
                 }
                 const item = dataSource[i];
                 section.data = [item];
-                data.push(section);
+                collectionDataArr.push(section);
             }
         } else if (headerSource.length > 0 && headerSource.length > dataSource.length) {
             let n;
@@ -99,7 +98,7 @@ export default class CollectionView extends Component {
                 } else {
                     section.data = [[]];
                 }
-                data.push(section);
+                collectionDataArr.push(section);
             }
         }
     }
@@ -109,8 +108,12 @@ export default class CollectionView extends Component {
         const { headerSource, dataSource } = props;
         CollectionView.handleDataSource(headerSource, dataSource);
         this.state = {
-            dataSource: data,
+            dataSource: collectionDataArr,
         };
+    }
+
+    componentWillUnmount() {
+        collectionDataArr = [];
     }
 
     /**
@@ -171,7 +174,7 @@ export default class CollectionView extends Component {
             return (null);
         }
         return (
-            typeof(renderSectionFooter) !=='undefined' ? renderSectionFooter(index) : (null)
+            typeof (renderSectionFooter) !== 'undefined' ? renderSectionFooter(index) : (null)
         );
     }
 
@@ -193,7 +196,7 @@ export default class CollectionView extends Component {
         }
         // 渲染空的组
         const { renderSectionEmptyComponent } = this.props;
-        return typeof(renderSectionEmptyComponent) !=='undefined' ? renderSectionEmptyComponent() : (null);
+        return typeof (renderSectionEmptyComponent) !== 'undefined' ? renderSectionEmptyComponent() : (null);
     }
 
     /**
@@ -227,7 +230,7 @@ export default class CollectionView extends Component {
         return (
             <View style={[styles.itemViewStyle, itemStyle]} key={`${sectionIndex}${itemIndex}`}>
                 {
-                    typeof(renderItem) !=='undefined' ? renderItem(item, sectionIndex, itemIndex) : (null)
+                    typeof (renderItem) !== 'undefined' ? renderItem(item, sectionIndex, itemIndex) : (null)
                 }
             </View>
         );
@@ -298,15 +301,14 @@ export default class CollectionView extends Component {
 styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: width,
+        width: Dimensions.get('window').width,
     },
     sectionViewStyle: {
         flexDirection: 'row',
         flexWrap: 'wrap',
     },
     itemViewStyle: {
-        margin: columnSpacing / 2.0,
+        margin: columnSpacing,
         flexDirection: 'column',
-        alignItems: 'center',
     },
 });

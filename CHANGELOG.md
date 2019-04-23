@@ -1,4 +1,9 @@
 ### Changelog
+
+####v1.1.4
+date: 2019-4-23
+*  Optimize the section layout of the CollectionView.
+
 ####v1.1.3
 date: 2019-4-22
 *  Optimize CollectionView.

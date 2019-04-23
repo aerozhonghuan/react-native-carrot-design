@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
 import {
     StyleSheet,
@@ -16,8 +17,8 @@ const columnSpacing = 15; // 子item列间距
 const cellW = (width - columnSpacing * (cols + 1)) / cols; // 子item宽
 const cellH = cellW; // 子item高
 
-const headerArr = [{ title: '第一组的header' }, { title: '第二组的header' }];
-const dataArr = [[
+const headerArrS = [{ title: '第一组的header' }, { title: '第二组的header' }];
+const dataArrS = [[
     {
         key: '第一组--第一个item',
     },
@@ -128,8 +129,8 @@ export default class CollectionViewS extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headerSource: headerArr,
-            dataSource: dataArr,
+            headerSource: headerArrS,
+            dataSource: dataArrS,
         };
     }
 
@@ -326,8 +327,6 @@ const styles = StyleSheet.create({
 
     sectionViewStyle: {
         flexDirection: 'row',
-        // justifyContent: 'space-around',
-        // alignContent:'flex-start',
         flexWrap: 'wrap',
         alignItems: 'flex-start',
     },

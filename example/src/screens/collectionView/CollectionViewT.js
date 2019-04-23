@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
 import {
     StyleSheet,
@@ -9,10 +10,9 @@ import {
 } from 'react-native';
 
 import { CollectionView } from 'react-native-carrot-design';
-import CommonFunc from '../../utils/CommonFunc';
 
-const headerArr = [{ title: '第一组的header' }, { title: '第二组的header' }];
-const dataArr = [[
+const headerArrT = [{ title: '第一组的header' }, { title: '第二组的header' }];
+const dataArrT = [[
     {
         key: '第一个item',
         enable: false,
@@ -22,7 +22,8 @@ const dataArr = [[
         key: '第二个item',
         enable: false,
         icon: require('../../assets/imags/collectionView_icon.png'),
-    }, {
+    },
+    {
         key: '第三个item',
         enable: false,
         icon: require('../../assets/imags/collectionView_icon.png'),
@@ -33,6 +34,19 @@ const dataArr = [[
         icon: require('../../assets/imags/collectionView_icon.png'),
     }, {
         key: '第五个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    }, {
+        key: '第六个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    },
+    {
+        key: '第七个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    }, {
+        key: '第八个item',
         enable: false,
         icon: require('../../assets/imags/collectionView_icon.png'),
     },
@@ -47,14 +61,34 @@ const dataArr = [[
         enable: false,
         icon: require('../../assets/imags/collectionView_icon.png'),
     },
+    {
+        key: '第二组--第三个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    },
+    {
+        key: '第二组--第四个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    },
+    {
+        key: '第二组--第五个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    },
+    {
+        key: '第二组--第六个item',
+        enable: false,
+        icon: require('../../assets/imags/collectionView_icon.png'),
+    },
 ],
 ];
 export default class CollectionViewT extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headerSource: headerArr,
-            dataSource: dataArr,
+            headerSource: headerArrT,
+            dataSource: dataArrT,
         };
     }
 
@@ -65,21 +99,18 @@ export default class CollectionViewT extends Component {
      * @param {itemIndex}: The index of the current item.
      * @return: React.ReactElement | null
      */
-    renderItem = (item, sectionIndex, itemIndex) => {
-        const num = CommonFunc.randomNumber(50, 250);
-        return (
-            <TouchableOpacity
-                style={[styles.itemView, { height: num }]}
-                activeOpacity={0.8}
-                onPress={() => {
-                    alert(`I'm ${item.key}(sectionIndex:${sectionIndex}--itemIndex:${itemIndex})`);
-                }}
-            >
-                {/* <Image style={styles.iconStyle} source={item.icon} /> */}
-                <Text style={styles.rowText} numberOfLines={0}>{item.key}</Text>
-            </TouchableOpacity>
-        );
-    }
+    renderItem = (item, sectionIndex, itemIndex) => (
+        <TouchableOpacity
+            style={styles.itemView}
+            activeOpacity={0.8}
+            onPress={() => {
+                alert(`I'm ${item.key}(sectionIndex:${sectionIndex}--itemIndex:${itemIndex})`);
+            }}
+        >
+            <Image style={styles.iconStyle} source={item.icon} />
+            <Text style={styles.rowText} numberOfLines={0}>{item.key}</Text>
+        </TouchableOpacity>
+    )
 
     /**
      * @description: Rendered at the top of each section. Sticky headers are not yet supported.
@@ -89,9 +120,9 @@ export default class CollectionViewT extends Component {
      */
     renderSectionHeader = (headerItem, sectionIndex) => (
         <Text style={styles.sectionHeader}>
-第
+            第
             {sectionIndex}
-组:sectionHeaderComponent
+            组:sectionHeaderComponent
         </Text>
     )
 
@@ -116,6 +147,8 @@ export default class CollectionViewT extends Component {
         return (
             <View style={styles.container}>
                 <CollectionView
+                    sectionStyle={styles.sectionViewStyle}
+                    itemStyle={styles.itemViewStyle}
                     headerSource={headerSource}
                     dataSource={dataSource}
                     renderItem={this.renderItem} // 渲染每个item
@@ -144,8 +177,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         textAlign: 'center',
         color: '#333333',
-        height: 160,
-        lineHeight: 160,
+        height: 60,
+        lineHeight: 60,
         width: Dimensions.width,
         backgroundColor: '#D1EEEE',
     },
@@ -169,8 +202,8 @@ const styles = StyleSheet.create({
     },
     iconStyle: {
         marginHorizontal: 10,
-        width: 80,
-        height: 80,
+        width: 60,
+        height: 60,
     },
     rowText: {
         marginTop: 10,
@@ -180,9 +213,16 @@ const styles = StyleSheet.create({
         width: Dimensions.width,
         textAlign: 'center',
     },
+    sectionViewStyle: {
+        flexDirection: 'column',
+        flexWrap: 'nowrap',
+    },
+    itemViewStyle: {
+        margin: 8,
+    },
     itemView: {
-        width: 100,
-        height: 130,
+        flexDirection: 'row',
+        height: 80,
         alignItems: 'center',
         backgroundColor: 'gray',
     },

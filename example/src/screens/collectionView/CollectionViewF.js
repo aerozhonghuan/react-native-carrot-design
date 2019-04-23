@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
 import {
     StyleSheet,
@@ -10,8 +11,8 @@ import {
 
 import { CollectionView } from 'react-native-carrot-design';
 
-const headerArr = [{ title: '第一组的header' }, { title: '第二组的header' }];
-const dataArr = [[
+const headerArrF = [{ title: '第一组的header' }, { title: '第二组的header' }];
+const dataArrF = [[
     {
         key: '第一个item',
         enable: false,
@@ -52,8 +53,8 @@ export default class CollectionViewF extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            headerSource: headerArr,
-            dataSource: dataArr,
+            headerSource: headerArrF,
+            dataSource: dataArrF,
         };
     }
 
@@ -65,7 +66,8 @@ export default class CollectionViewF extends Component {
      * @return: React.ReactElement | null
      */
     renderItem = (item, sectionIndex, itemIndex) => (
-        <TouchableOpacity style={styles.itemView}
+        <TouchableOpacity
+            style={styles.itemView}
             activeOpacity={0.8}
             onPress={() => {
                 alert(`I'm ${item.key}(sectionIndex:${sectionIndex}--itemIndex:${itemIndex})`);
@@ -83,7 +85,11 @@ export default class CollectionViewF extends Component {
      * @return: React.ReactElement | null
      */
     renderSectionHeader = (headerItem, sectionIndex) => (
-        <Text style={styles.sectionHeader}>第{sectionIndex}组:sectionHeaderComponent</Text>
+        <Text style={styles.sectionHeader}>
+            第
+            {sectionIndex}
+            组:sectionHeaderComponent
+        </Text>
     )
 
     /**
@@ -164,16 +170,16 @@ const styles = StyleSheet.create({
         height: 80,
     },
     rowText: {
-        marginTop: 10,
+        marginTop: 5,
         color: '#333333',
-        height: 33,
+        height: 35,
         fontSize: 13,
         width: Dimensions.width,
         textAlign: 'center',
     },
     itemView: {
         width: 100,
-        height: 130,
+        height: 120,
         alignItems: 'center',
         backgroundColor: 'gray',
     },

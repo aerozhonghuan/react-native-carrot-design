@@ -9,7 +9,7 @@ import {
     View,
 } from 'react-native';
 import {
-    Color, ConstWH, Padding, FontSize, Margin, AppDimensions,
+    Color, ConstWH, Padding, FontSize, Margin,
 } from '../../style/CommonStyles';
 import { COLLECTIONS } from '../../../demoList';
 
@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
         fontSize: FontSize.mainTextSize,
     },
     actionInfoKey: {
-        marginLeft: Margin.containerMargin,
         color: Color.textColor,
     },
     actionInfoValue: {
