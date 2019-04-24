@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-18 17:28:56
- * @LastEditTime: 2019-04-23 11:40:23
+ * @LastEditTime: 2019-04-23 18:18:14
  */
 
 // 一级页面  demo列表
@@ -38,6 +38,24 @@ export const MAINSCREENS = [
     //     description: 'PictureBrowserView展示',
     //     module: require('./src/screens/PictureBrowserView'),
     // },
+    // {
+    //     name: 'CornerTextView',
+    //     title: 'CornerTextView',
+    //     description: '圆角文本',
+    //     module: require('./src/screens/CornerTextView'),
+    // },
+    {
+        name: 'LoadingView',
+        title: 'LoadingView',
+        description: 'loading加载',
+        module: require('./src/screens/LoadingView'),
+    },
+    {
+        name: 'AlertView',
+        title: 'AlertView',
+        description: '自定义AlertView',
+        module: require('./src/screens/AlertView'),
+    },
 ];
 
 // 二级页面

@@ -1387,7 +1387,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,568,718],"index.js");
+},0,[1,2,568,722],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -111902,26 +111902,36 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     title: 'BannerView',
     description: 'banner展示',
     module: _$$_REQUIRE(_dependencyMap[3], "./src/screens/BannerView")
+  }, {
+    name: 'LoadingView',
+    title: 'LoadingView',
+    description: 'loading加载',
+    module: _$$_REQUIRE(_dependencyMap[4], "./src/screens/LoadingView")
+  }, {
+    name: 'AlertView',
+    title: 'AlertView',
+    description: '自定义AlertView',
+    module: _$$_REQUIRE(_dependencyMap[5], "./src/screens/AlertView")
   }];
   exports.MAINSCREENS = MAINSCREENS;
   var COLLECTIONS = [{
     name: 'CollectionViewF',
     title: '九宫格',
     description: '经典九宫格',
-    module: _$$_REQUIRE(_dependencyMap[4], "./src/screens/collectionView/CollectionViewF")
+    module: _$$_REQUIRE(_dependencyMap[6], "./src/screens/collectionView/CollectionViewF")
   }, {
     name: 'CollectionViewS',
     title: '九宫格',
     description: '更多属性',
-    module: _$$_REQUIRE(_dependencyMap[5], "./src/screens/collectionView/CollectionViewS")
+    module: _$$_REQUIRE(_dependencyMap[7], "./src/screens/collectionView/CollectionViewS")
   }, {
     name: 'CollectionViewT',
     title: '普通列表',
     description: '实现SectionList分组列表效果',
-    module: _$$_REQUIRE(_dependencyMap[6], "./src/screens/collectionView/CollectionViewT")
+    module: _$$_REQUIRE(_dependencyMap[8], "./src/screens/collectionView/CollectionViewT")
   }];
   exports.COLLECTIONS = COLLECTIONS;
-},698,[699,709,710,711,713,715,717],"demoList.js");
+},698,[699,709,710,711,713,714,717,719,721],"demoList.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -112008,18 +112018,34 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           }
         }, _react.default.createElement(_reactNativeCarrotDesign.ButtonView, {
           activeOpacity: 0.6,
-          btnTitleStyle: {
-            color: 'white',
-            fontSize: 19
-          },
-          btnViewStyle: {
-            backgroundColor: _CommonStyles.Color.mainColor
-          },
-          title: "button",
+          title: "default style",
           onPressCallback: this.pressBtn,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 19
+          }
+        }), _react.default.createElement(_reactNativeCarrotDesign.ButtonView, {
+          activeOpacity: 0.6,
+          btnTitleStyle: {
+            color: 'white',
+            fontSize: 19
+          },
+          btnViewStyle: styles.button,
+          title: "button",
+          onPressCallback: this.pressBtn,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        }), _react.default.createElement(_reactNativeCarrotDesign.ButtonView, {
+          activeOpacity: 0.6,
+          disabled: true,
+          btnViewStyle: styles.disabledBtn,
+          title: "disabled button",
+          onPressCallback: this.pressBtn,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
           }
         }));
       }
@@ -112033,9 +112059,24 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var styles = _reactNative.StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
+      paddingTop: 60,
+      flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: '#F5FCFF'
+    },
+    button: {
+      backgroundColor: _CommonStyles.Color.mainColor,
+      marginVertical: 30,
+      fontSize: 15,
+      borderRadius: 3,
+      borderWidth: 2,
+      borderColor: 'blue'
+    },
+    disabledBtn: {
+      marginVertical: 30,
+      width: 200,
+      borderRadius: 45 / 2.0,
+      fontSize: 15
     }
   });
 },699,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/ButtonView.js");
@@ -112087,12 +112128,6 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return _CollectionView.default;
     }
   });
-  Object.defineProperty(exports, "PictureBrowserView", {
-    enumerable: true,
-    get: function get() {
-      return _PictureBrowserView.default;
-    }
-  });
 
   var _ButtonView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "./src/ButtonView"));
 
@@ -112107,9 +112142,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _BannerView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "./src/BannerView"));
 
   var _CollectionView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "./src/CollectionView"));
-
-  var _PictureBrowserView = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./src/PictureBrowserView/PictureBrowserView"));
-},700,[1,701,702,703,704,705,706,708,719],"node_modules/react-native-carrot-design/index.js");
+},700,[1,701,702,703,704,705,706,708],"node_modules/react-native-carrot-design/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -113755,7 +113788,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             style: [styles.sectionViewStyle, sectionStyle],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 190
+              lineNumber: 191
             }
           }, item.map(function (element) {
             return _this.renderSubItem(element);
@@ -113801,13 +113834,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           key: "" + sectionIndex + itemIndex,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231
+            lineNumber: 232
           }
         }, typeof renderItem !== 'undefined' ? renderItem(item, sectionIndex, itemIndex) : null);
       };
 
       var headerSource = props.headerSource,
           _dataSource = props.dataSource;
+      collectionDataArr = [];
       CollectionView.handleDataSource(headerSource, _dataSource);
       _this.state = {
         dataSource: collectionDataArr
@@ -113855,7 +113889,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.container,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 278
+            lineNumber: 279
           }
         }, _react.default.createElement(_reactNative.SectionList, {
           ref: function ref(r) {
@@ -113877,7 +113911,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           inverted: inverted,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279
+            lineNumber: 280
           }
         }));
       }
@@ -114007,6 +114041,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeCarrotDesign = _$$_REQUIRE(_dependencyMap[10], "react-native-carrot-design");
 
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[11], "../style/CommonStyles");
+
   var _temp,
       _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/TextInputView.js";
 
@@ -114045,13 +114081,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
       _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(TextInputViewDemo)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-      _this.onChangeText = function (text) {
-        alert(text);
-      };
+      _this.onChangeText = function (text) {};
 
-      _this.onSubmitEditing = function (text) {
-        alert(text);
-      };
+      _this.onSubmitEditing = function (text) {};
 
       return _this;
     }
@@ -114063,22 +114095,65 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.container,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 23
           }
-        }, _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+        }, _react.default.createElement(_reactNative.Text, {
+          style: styles.text,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        }, "\u5DE6\u4FA7\u65E0\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           hasTitle: false,
-          leftTitle: "\u7528\u6237\u540D",
-          titleStyle: {
-            color: 'blue',
-            fontSize: 19
-          },
           placeholder: "\u8BF7\u8F93\u5165",
           placeholderTextColor: "red",
           onChangeText: this.onChangeText,
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 25
+          }
+        }), _react.default.createElement(_reactNative.Text, {
+          style: styles.text,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          }
+        }, "\u5DE6\u4FA7\u6709\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+          inputBgStyle: styles.inputRow,
+          titleStyle: styles.titleStyle,
+          inputStyle: styles.input,
+          hasTitle: true,
+          leftTitle: "\u7528\u6237\u540D:",
+          placeholder: "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
+          placeholderTextColor: _CommonStyles.Color.placehoderColor,
+          onChangeText: this.onChangeText,
+          onSubmitEditing: this.onSubmitEditing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          }
+        }), _react.default.createElement(_reactNative.Text, {
+          style: styles.text,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          }
+        }, "\u6700\u591A\u8F93\u51658\u4F4D\u7684\u5BC6\u7801:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+          inputBgStyle: styles.inputRow,
+          titleStyle: styles.titleStyle,
+          inputStyle: styles.input,
+          hasTitle: true,
+          leftTitle: "\u5BC6\u7801:",
+          maxLength: 8,
+          placeholder: "\u8BF7\u8F93\u5165\u5BC6\u7801",
+          placeholderTextColor: _CommonStyles.Color.placehoderColor,
+          secureTextEntry: true,
+          onChangeText: this.onChangeText,
+          onSubmitEditing: this.onSubmitEditing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
           }
         }));
       }
@@ -114092,12 +114167,46 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var styles = _reactNative.StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
+      paddingTop: 60,
+      flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: '#F5FCFF'
+    },
+    text: {
+      width: _CommonStyles.AppDimensions.width,
+      marginTop: 60,
+      marginBottom: 30,
+      marginLeft: 20,
+      textAlign: 'left'
+    },
+    titleStyle: {
+      color: 'blue',
+      fontSize: 15
+    },
+    inputTitle: {
+      fontSize: 14,
+      color: '#333333',
+      textAlign: 'left'
+    },
+    inputRow: {
+      width: _CommonStyles.AppDimensions.width - 30,
+      borderColor: _CommonStyles.Color.mainColor,
+      borderBottomWidth: 0.5,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      height: _CommonStyles.ConstWH.inputHeight,
+      lineHeight: _CommonStyles.ConstWH.inputHeight
+    },
+    input: {
+      flex: 3,
+      marginLeft: 3,
+      marginRight: 3,
+      fontSize: 14,
+      color: '#666666'
     }
   });
-},709,[1,592,22,23,36,39,42,53,197,2,700],"src/screens/TextInputView.js");
+},709,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/TextInputView.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -114476,6 +114585,286 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
 
+  var _getPrototypeOf3 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
+
+  var _reactNativeCarrotDesign = _$$_REQUIRE(_dependencyMap[10], "react-native-carrot-design");
+
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[11], "../style/CommonStyles");
+
+  var _temp,
+      _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/LoadingView.js";
+
+  var _components = {
+    LoadingViewDemo: {
+      displayName: "LoadingViewDemo"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "src/screens/LoadingView.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var LoadingViewDemo = _wrapComponent("LoadingViewDemo")((_temp = function (_Component) {
+    (0, _inherits2.default)(LoadingViewDemo, _Component);
+
+    function LoadingViewDemo() {
+      var _getPrototypeOf2;
+
+      var _this;
+
+      (0, _classCallCheck2.default)(this, LoadingViewDemo);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(LoadingViewDemo)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+      _this.pressBtn = function () {
+        _this.Loading.show();
+
+        _this.Timer = setTimeout(function () {
+          _this.Loading.close();
+        }, 2000);
+      };
+
+      return _this;
+    }
+
+    (0, _createClass2.default)(LoadingViewDemo, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react.default.createElement(_reactNative.View, {
+          style: styles.container,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        }, _react.default.createElement(_reactNativeCarrotDesign.ButtonView, {
+          activeOpacity: 0.6,
+          btnTitleStyle: {
+            color: 'white',
+            fontSize: 19
+          },
+          btnViewStyle: {
+            backgroundColor: _CommonStyles.Color.mainColor
+          },
+          title: "\u6A21\u62DF\u8BF7\u6C42",
+          onPressCallback: function onPressCallback() {
+            return _this2.pressBtn();
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          }
+        }), _react.default.createElement(_reactNativeCarrotDesign.LoadingView, {
+          ref: function ref(r) {
+            _this2.Loading = r;
+          },
+          hide: true,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          }
+        }));
+      }
+    }]);
+    return LoadingViewDemo;
+  }(_react.Component), _temp));
+
+  var _default2 = LoadingViewDemo;
+  exports.default = _default2;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF'
+    }
+  });
+},713,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/LoadingView.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
+
+  var _reactNativeCarrotDesign = _$$_REQUIRE(_dependencyMap[10], "react-native-carrot-design");
+
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[11], "../style/CommonStyles");
+
+  var _DemoEmpty = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12], "../components/DemoEmpty"));
+
+  var _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/AlertView.js";
+  var _components = {
+    AlertViewDemo: {
+      displayName: "AlertViewDemo"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "src/screens/AlertView.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var AlertViewDemo = _wrapComponent("AlertViewDemo")(function (_Component) {
+    (0, _inherits2.default)(AlertViewDemo, _Component);
+
+    function AlertViewDemo() {
+      (0, _classCallCheck2.default)(this, AlertViewDemo);
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AlertViewDemo).apply(this, arguments));
+    }
+
+    (0, _createClass2.default)(AlertViewDemo, [{
+      key: "render",
+      value: function render() {
+        return _react.default.createElement(_reactNative.View, {
+          style: styles.container,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        }, _react.default.createElement(_DemoEmpty.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          }
+        }));
+      }
+    }]);
+    return AlertViewDemo;
+  }(_react.Component));
+
+  var _default2 = AlertViewDemo;
+  exports.default = _default2;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#F5FCFF'
+    }
+  });
+},714,[1,592,22,23,36,39,42,53,197,2,700,697,715],"src/screens/AlertView.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = DemoEmpty;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[3], "../style/CommonStyles");
+
+  var _GlobalConst = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "../config/GlobalConst"));
+
+  var _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/components/DemoEmpty.js";
+
+  var styles = _reactNative.StyleSheet.create({
+    emptyComponent: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: _CommonStyles.Color.placehoderColor,
+      flexDirection: 'column',
+      backgroundColor: _CommonStyles.Color.grayContainerBg
+    }
+  });
+
+  function DemoEmpty() {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.emptyComponent,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      }
+    }, _GlobalConst.default.DemoEmptyString));
+  }
+},715,[1,53,2,697,716],"src/components/DemoEmpty.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  var GlobalString = {
+    DemoEmptyString: '这家伙太懒了，还没有添加demo哦~'
+  };
+  var _default = GlobalString;
+  exports.default = _default;
+},716,[],"src/config/GlobalConst.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
+
   var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
 
   var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
@@ -114709,7 +115098,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: 'gray'
     }
   });
-},713,[1,592,22,23,36,39,42,53,197,2,700,714],"src/screens/collectionView/CollectionViewF.js");
+},717,[1,592,22,23,36,39,42,53,197,2,700,718],"src/screens/collectionView/CollectionViewF.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0], "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/node_modules/react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -114721,7 +115110,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     "name": "collectionView_icon",
     "type": "png"
   });
-},714,[191],"src/assets/imags/collectionView_icon.png");
+},718,[191],"src/assets/imags/collectionView_icon.png");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115102,7 +115491,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       height: cellH
     }
   });
-},715,[1,592,22,23,36,39,42,53,197,2,700,716],"src/screens/collectionView/CollectionViewS.js");
+},719,[1,592,22,23,36,39,42,53,197,2,700,720],"src/screens/collectionView/CollectionViewS.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115139,7 +115528,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   exports.default = CommonFunc;
-},716,[1,22,23],"src/utils/CommonFunc.js");
+},720,[1,22,23],"src/utils/CommonFunc.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115415,7 +115804,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       flexDirection: 'column',
       flexWrap: 'nowrap'
     },
+    itemViewStyle: {
+      flexDirection: 'row',
+      margin: 8
+    },
     itemView: {
+      flex: 3,
       width: _reactNative.Dimensions.width,
       flexDirection: 'row',
       height: 80,
@@ -115423,13 +115817,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: 'gray'
     }
   });
-},717,[1,592,22,23,36,39,42,53,197,2,700,714],"src/screens/collectionView/CollectionViewT.js");
+},721,[1,592,22,23,36,39,42,53,197,2,700,718],"src/screens/collectionView/CollectionViewT.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "example",
   "displayName": "example"
 };
-},718,[],"app.json");
+},722,[],"app.json");
 __r(92);
 __r(0);
 //# sourceMappingURL=index.map
