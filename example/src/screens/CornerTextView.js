@@ -16,7 +16,15 @@ export default class CornerTextViewDemo extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <CornerTextView>圆角文本</CornerTextView>
+                <CornerTextView
+                    cornorStyle={styles.cornor}
+                    title="圆角文本"
+                />
+                <CornerTextView
+                    cornorStyle={styles.cornorS}
+                    textStyle={styles.titleStyle}
+                    title="自定义样式"
+                />
             </View>
         );
     }
@@ -25,8 +33,26 @@ export default class CornerTextViewDemo extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: Color.screenBgColor,
+    },
+    cornor: {
+        marginTop: 60,
+        width: 100,
+        height: 40,
+        borderRadius: 6,
+        backgroundColor: Color.mainColor,
+    },
+    cornorS: {
+        marginTop: 60,
+        width: 100,
+        height: 40,
+        borderRadius: 3,
+        borderWidth: 1,
+        backgroundColor: 'white',
+    },
+    titleStyle: {
+        color: Color.mainColor,
     },
 });

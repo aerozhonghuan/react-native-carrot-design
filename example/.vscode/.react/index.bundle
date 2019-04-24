@@ -1387,7 +1387,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,568,722],"index.js");
+},0,[1,2,568,723],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -111835,7 +111835,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     mainTextColor: '#333333',
     lineColor: '#e5e5e5',
     subTextColor: '#666666',
-    placehoderColor: '#999999'
+    placehoderColor: '#999999',
+    screenBgColor: '#F5FCFF'
   };
   exports.Color = Color;
   var FontSize = {
@@ -111903,35 +111904,40 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     description: 'banner展示',
     module: _$$_REQUIRE(_dependencyMap[3], "./src/screens/BannerView")
   }, {
+    name: 'CornerTextView',
+    title: 'CornerTextView',
+    description: '圆角文本',
+    module: _$$_REQUIRE(_dependencyMap[4], "./src/screens/CornerTextView")
+  }, {
     name: 'LoadingView',
     title: 'LoadingView',
     description: 'loading加载',
-    module: _$$_REQUIRE(_dependencyMap[4], "./src/screens/LoadingView")
+    module: _$$_REQUIRE(_dependencyMap[5], "./src/screens/LoadingView")
   }, {
     name: 'AlertView',
     title: 'AlertView',
     description: '自定义AlertView',
-    module: _$$_REQUIRE(_dependencyMap[5], "./src/screens/AlertView")
+    module: _$$_REQUIRE(_dependencyMap[6], "./src/screens/AlertView")
   }];
   exports.MAINSCREENS = MAINSCREENS;
   var COLLECTIONS = [{
     name: 'CollectionViewF',
     title: '九宫格',
     description: '经典九宫格',
-    module: _$$_REQUIRE(_dependencyMap[6], "./src/screens/collectionView/CollectionViewF")
+    module: _$$_REQUIRE(_dependencyMap[7], "./src/screens/collectionView/CollectionViewF")
   }, {
     name: 'CollectionViewS',
     title: '九宫格',
     description: '更多属性',
-    module: _$$_REQUIRE(_dependencyMap[7], "./src/screens/collectionView/CollectionViewS")
+    module: _$$_REQUIRE(_dependencyMap[8], "./src/screens/collectionView/CollectionViewS")
   }, {
     name: 'CollectionViewT',
     title: '普通列表',
     description: '实现SectionList分组列表效果',
-    module: _$$_REQUIRE(_dependencyMap[8], "./src/screens/collectionView/CollectionViewT")
+    module: _$$_REQUIRE(_dependencyMap[9], "./src/screens/collectionView/CollectionViewT")
   }];
   exports.COLLECTIONS = COLLECTIONS;
-},698,[699,709,710,711,713,714,717,719,721],"demoList.js");
+},698,[699,709,710,711,713,714,715,718,720,722],"demoList.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -114095,13 +114101,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.container,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 31
           }
         }, _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 32
           }
         }, "\u5DE6\u4FA7\u65E0\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           hasTitle: false,
@@ -114111,13 +114117,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 33
           }
         }), _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 40
           }
         }, "\u5DE6\u4FA7\u6709\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           inputBgStyle: styles.inputRow,
@@ -114131,13 +114137,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 41
           }
         }), _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 52
           }
         }, "\u6700\u591A\u8F93\u51658\u4F4D\u7684\u5BC6\u7801:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           inputBgStyle: styles.inputRow,
@@ -114153,7 +114159,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 53
           }
         }));
       }
@@ -114600,6 +114606,141 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _CommonStyles = _$$_REQUIRE(_dependencyMap[11], "../style/CommonStyles");
 
   var _temp,
+      _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/CornerTextView.js";
+
+  var _components = {
+    CornerTextViewDemo: {
+      displayName: "CornerTextViewDemo"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
+    filename: "src/screens/CornerTextView.js",
+    components: _components,
+    locals: [module],
+    imports: [_react.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var CornerTextViewDemo = _wrapComponent("CornerTextViewDemo")((_temp = function (_Component) {
+    (0, _inherits2.default)(CornerTextViewDemo, _Component);
+
+    function CornerTextViewDemo() {
+      var _getPrototypeOf2;
+
+      var _this;
+
+      (0, _classCallCheck2.default)(this, CornerTextViewDemo);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CornerTextViewDemo)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+      _this.pressBtn = function () {
+        alert('press btn');
+      };
+
+      return _this;
+    }
+
+    (0, _createClass2.default)(CornerTextViewDemo, [{
+      key: "render",
+      value: function render() {
+        return _react.default.createElement(_reactNative.View, {
+          style: styles.container,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+          }
+        }, _react.default.createElement(_reactNativeCarrotDesign.CornerTextView, {
+          cornorStyle: styles.cornor,
+          title: "\u5706\u89D2\u6587\u672C",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          }
+        }), _react.default.createElement(_reactNativeCarrotDesign.CornerTextView, {
+          cornorStyle: styles.cornorS,
+          textStyle: styles.titleStyle,
+          title: "\u81EA\u5B9A\u4E49\u6837\u5F0F",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          }
+        }));
+      }
+    }]);
+    return CornerTextViewDemo;
+  }(_react.Component), _temp));
+
+  var _default2 = CornerTextViewDemo;
+  exports.default = _default2;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: 'column',
+      alignItems: 'center',
+      backgroundColor: _CommonStyles.Color.screenBgColor
+    },
+    cornor: {
+      marginTop: 60,
+      width: 100,
+      height: 40,
+      borderRadius: 6,
+      backgroundColor: _CommonStyles.Color.mainColor
+    },
+    cornorS: {
+      marginTop: 60,
+      width: 100,
+      height: 40,
+      borderRadius: 3,
+      borderWidth: 1,
+      backgroundColor: 'white'
+    },
+    titleStyle: {
+      color: _CommonStyles.Color.mainColor
+    }
+  });
+},713,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/CornerTextView.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
+
+  var _getPrototypeOf3 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "react"));
+
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../node_modules/react-transform-hmr/lib/index.js"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
+
+  var _reactNativeCarrotDesign = _$$_REQUIRE(_dependencyMap[10], "react-native-carrot-design");
+
+  var _CommonStyles = _$$_REQUIRE(_dependencyMap[11], "../style/CommonStyles");
+
+  var _temp,
       _jsxFileName = "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/src/screens/LoadingView.js";
 
   var _components = {
@@ -114702,7 +114843,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: '#F5FCFF'
     }
   });
-},713,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/LoadingView.js");
+},714,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/LoadingView.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -114794,7 +114935,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: '#F5FCFF'
     }
   });
-},714,[1,592,22,23,36,39,42,53,197,2,700,697,715],"src/screens/AlertView.js");
+},715,[1,592,22,23,36,39,42,53,197,2,700,697,716],"src/screens/AlertView.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -114837,7 +114978,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       }
     }, _GlobalConst.default.DemoEmptyString));
   }
-},715,[1,53,2,697,716],"src/components/DemoEmpty.js");
+},716,[1,53,2,697,717],"src/components/DemoEmpty.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -114848,7 +114989,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = GlobalString;
   exports.default = _default;
-},716,[],"src/config/GlobalConst.js");
+},717,[],"src/config/GlobalConst.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115098,7 +115239,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: 'gray'
     }
   });
-},717,[1,592,22,23,36,39,42,53,197,2,700,718],"src/screens/collectionView/CollectionViewF.js");
+},718,[1,592,22,23,36,39,42,53,197,2,700,719],"src/screens/collectionView/CollectionViewF.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0], "/Users/nav/wanglh/project/npmPack/react-native-carrot-design/example/node_modules/react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -115110,7 +115251,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     "name": "collectionView_icon",
     "type": "png"
   });
-},718,[191],"src/assets/imags/collectionView_icon.png");
+},719,[191],"src/assets/imags/collectionView_icon.png");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115491,7 +115632,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       height: cellH
     }
   });
-},719,[1,592,22,23,36,39,42,53,197,2,700,720],"src/screens/collectionView/CollectionViewS.js");
+},720,[1,592,22,23,36,39,42,53,197,2,700,721],"src/screens/collectionView/CollectionViewS.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115528,7 +115669,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   exports.default = CommonFunc;
-},720,[1,22,23],"src/utils/CommonFunc.js");
+},721,[1,22,23],"src/utils/CommonFunc.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -115817,13 +115958,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       backgroundColor: 'gray'
     }
   });
-},721,[1,592,22,23,36,39,42,53,197,2,700,718],"src/screens/collectionView/CollectionViewT.js");
+},722,[1,592,22,23,36,39,42,53,197,2,700,719],"src/screens/collectionView/CollectionViewT.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "example",
   "displayName": "example"
 };
-},722,[],"app.json");
+},723,[],"app.json");
 __r(92);
 __r(0);
 //# sourceMappingURL=index.map

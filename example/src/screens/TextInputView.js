@@ -1,3 +1,11 @@
+/*
+ * @Description: TextInputViewDemo
+ * @Author: wanglh
+ * @LastEditors: wanglh
+ * @Date: 2019-04-19 17:33:42
+ * @LastEditTime: 2019-04-24 19:22:34
+ */
+
 /* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
 import {
@@ -76,12 +84,10 @@ const styles = StyleSheet.create({
         textAlign: 'left',
     },
     titleStyle: {
-        color: 'blue',
+        color: Color.mainTextColor,
         fontSize: 15,
     },
     inputTitle: {
-        // height: ConstWH.inputHeight,
-        // lineHeight: ConstWH.inputHeight,
         fontSize: 14,
         color: '#333333',
         textAlign: 'left',
@@ -100,8 +106,6 @@ const styles = StyleSheet.create({
         flex: 3,
         marginLeft: 3,
         marginRight: 3,
-        // height: ConstWH.inputHeight,
-        // lineHeight: ConstWH.inputHeight,
         fontSize: 14,
         color: '#666666',
     },
