@@ -1,5 +1,9 @@
 ### Changelog
 
+####v1.1.6
+date: 2019-4-25
+*  Add a new feature to the TextInputView to set the icon on the left.
+
 ####v1.1.5
 date: 2019-4-23
 *  Fix the problem that the CollectionView data source is not cleared.

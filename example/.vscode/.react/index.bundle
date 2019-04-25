@@ -112606,6 +112606,10 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       color: '#333333',
       textAlign: 'left'
     },
+    inputImage: {
+      height: inputHeight - 6,
+      width: inputHeight - 6
+    },
     input: {
       flex: 3,
       marginLeft: 3,
@@ -112613,8 +112617,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       height: inputHeight,
       lineHeight: inputHeight,
       fontSize: 14,
-      color: '#666666',
-      backgroundColor: 'orange'
+      color: '#666666'
     }
   });
 
@@ -112630,7 +112633,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       key: "render",
       value: function render() {
         var _this$props = this.props,
-            hasTitle = _this$props.hasTitle,
+            leftImageSource = _this$props.leftImageSource,
+            imageStyle = _this$props.imageStyle,
+            leftType = _this$props.leftType,
             leftTitle = _this$props.leftTitle,
             activeOpacity = _this$props.activeOpacity,
             inputBgStyle = _this$props.inputBgStyle,
@@ -112659,13 +112664,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           activeOpacity: activeOpacity,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 128
           }
-        }, hasTitle ? _react.default.createElement(_reactNative.Text, {
+        }, leftType === 'image' ? _react.default.createElement(_reactNative.Image, {
+          source: leftImageSource,
+          style: [imageStyle],
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130
+          }
+        }) : leftType === 'text' ? _react.default.createElement(_reactNative.Text, {
           style: [titleStyle],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 135
           }
         }, leftTitle) : null, _react.default.createElement(_reactNative.TextInput, {
           allowFontScaling: allowFontScaling || true,
@@ -112693,19 +112705,21 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121
+            lineNumber: 138
           }
         }));
       }
     }]);
     return TextInputView;
   }(_react.PureComponent), _class.propTypes = {
-    hasTitle: _propTypes.default.bool.isRequired,
+    imageStyle: _propTypes.default.oneOfType([_propTypes.default.object]),
+    leftImageSource: _propTypes.default.oneOfType([_propTypes.default.any]),
+    leftType: _propTypes.default.string,
     leftTitle: _propTypes.default.string,
     activeOpacity: _propTypes.default.number,
-    inputBgStyle: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.number]),
-    inputStyle: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.number]),
-    titleStyle: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.number]),
+    inputBgStyle: _propTypes.default.oneOfType([_propTypes.default.object]),
+    inputStyle: _propTypes.default.oneOfType([_propTypes.default.object]),
+    titleStyle: _propTypes.default.oneOfType([_propTypes.default.object]),
     allowFontScaling: _propTypes.default.bool,
     autoCorrect: _propTypes.default.bool,
     autoFocus: _propTypes.default.bool,
@@ -112725,7 +112739,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     onSubmitEditing: _propTypes.default.func,
     onChangeText: _propTypes.default.func
   }, _class.defaultProps = {
-    leftTitle: undefined,
+    imageStyle: styles.inputImage,
+    leftImageSource: undefined,
+    leftType: undefined,
     activeOpacity: 1,
     inputBgStyle: styles.inputRow,
     inputStyle: styles.input,
@@ -114087,9 +114103,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
       _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(TextInputViewDemo)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-      _this.onChangeText = function (text) {};
+      _this.onChangeText = function (text) {
+        console.log(text);
+      };
 
-      _this.onSubmitEditing = function (text) {};
+      _this.onSubmitEditing = function (text) {
+        console.log(text);
+      };
 
       return _this;
     }
@@ -114101,35 +114121,40 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           style: styles.container,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 32
+          }
+        }, _react.default.createElement(_reactNative.ScrollView, {
+          keyboardShouldPersistTaps: "always",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
           }
         }, _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 34
           }
-        }, "\u5DE6\u4FA7\u65E0\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
-          hasTitle: false,
+        }, "\u4E00\u3001\u5DE6\u4FA7\u65E0\u6807\u9898/\u56FE\u7247:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           placeholder: "\u8BF7\u8F93\u5165",
           placeholderTextColor: "red",
           onChangeText: this.onChangeText,
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 35
           }
         }), _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 41
           }
-        }, "\u5DE6\u4FA7\u6709\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+        }, "\u4E8C\u3001\u5DE6\u4FA7\u6709\u6807\u9898:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           inputBgStyle: styles.inputRow,
           titleStyle: styles.titleStyle,
           inputStyle: styles.input,
-          hasTitle: true,
+          leftType: "text",
           leftTitle: "\u7528\u6237\u540D:",
           placeholder: "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
           placeholderTextColor: _CommonStyles.Color.placehoderColor,
@@ -114137,19 +114162,39 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 42
           }
         }), _react.default.createElement(_reactNative.Text, {
           style: styles.text,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 53
           }
-        }, "\u6700\u591A\u8F93\u51658\u4F4D\u7684\u5BC6\u7801:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+        }, "\u4E09\u3001\u5DE6\u4FA7\u6709\u56FE\u7247:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+          inputBgStyle: styles.inputRow,
+          imageStyle: styles.imageStyle,
+          inputStyle: styles.input,
+          leftType: "image",
+          leftImageSource: _$$_REQUIRE(_dependencyMap[12], "../assets/imags/collectionView_icon.png"),
+          placeholder: "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
+          placeholderTextColor: _CommonStyles.Color.placehoderColor,
+          onChangeText: this.onChangeText,
+          onSubmitEditing: this.onSubmitEditing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          }
+        }), _react.default.createElement(_reactNative.Text, {
+          style: styles.text,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65
+          }
+        }, "\u56DB\u3001\u6700\u591A\u8F93\u51658\u4F4D\u7684\u5BC6\u7801:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
           inputBgStyle: styles.inputRow,
           titleStyle: styles.titleStyle,
           inputStyle: styles.input,
-          hasTitle: true,
+          leftType: "text",
           leftTitle: "\u5BC6\u7801:",
           maxLength: 8,
           placeholder: "\u8BF7\u8F93\u5165\u5BC6\u7801",
@@ -114159,9 +114204,30 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           onSubmitEditing: this.onSubmitEditing,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 66
           }
-        }));
+        }), _react.default.createElement(_reactNative.Text, {
+          style: styles.text,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 79
+          }
+        }, "\u4E94\u3001\u8BBE\u7F6E\u8F93\u5165\u6846\u8FB9\u6846:"), _react.default.createElement(_reactNativeCarrotDesign.TextInputView, {
+          inputBgStyle: styles.inputRowNoBorder,
+          titleStyle: styles.titleStyle,
+          inputStyle: styles.inputBorder,
+          leftType: "text",
+          leftTitle: "\u90AE\u7BB1:",
+          maxLength: 8,
+          placeholder: "\u8BF7\u8F93\u5165\u90AE\u7BB1",
+          placeholderTextColor: _CommonStyles.Color.placehoderColor,
+          onChangeText: this.onChangeText,
+          onSubmitEditing: this.onSubmitEditing,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80
+          }
+        })));
       }
     }]);
     return TextInputViewDemo;
@@ -114173,21 +114239,21 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var styles = _reactNative.StyleSheet.create({
     container: {
       flex: 1,
-      paddingTop: 60,
-      flexDirection: 'column',
-      alignItems: 'center',
+      paddingHorizontal: 30 / 2,
       backgroundColor: '#F5FCFF'
     },
     text: {
-      width: _CommonStyles.AppDimensions.width,
       marginTop: 60,
-      marginBottom: 30,
-      marginLeft: 20,
+      marginBottom: 10,
       textAlign: 'left'
     },
     titleStyle: {
-      color: 'blue',
+      color: _CommonStyles.Color.mainTextColor,
       fontSize: 15
+    },
+    imageStyle: {
+      height: 32,
+      width: 32
     },
     inputTitle: {
       fontSize: 14,
@@ -114210,9 +114276,30 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       marginRight: 3,
       fontSize: 14,
       color: '#666666'
+    },
+    inputRowNoBorder: {
+      width: _CommonStyles.AppDimensions.width - 30,
+      borderBottomWidth: 0,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      height: _CommonStyles.ConstWH.inputHeight,
+      lineHeight: _CommonStyles.ConstWH.inputHeight
+    },
+    inputBorder: {
+      flex: 3,
+      borderColor: _CommonStyles.Color.mainColor,
+      borderWidth: 0.5,
+      marginLeft: 3,
+      marginRight: 3,
+      paddingHorizontal: 10,
+      fontSize: 14,
+      color: '#666666',
+      height: _CommonStyles.ConstWH.inputHeight - 10,
+      lineHeight: _CommonStyles.ConstWH.inputHeight - 10
     }
   });
-},709,[1,592,22,23,36,39,42,53,197,2,700,697],"src/screens/TextInputView.js");
+},709,[1,592,22,23,36,39,42,53,197,2,700,697,719],"src/screens/TextInputView.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
