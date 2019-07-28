@@ -1,4 +1,7 @@
 ### Changelog
+####v1.1.7
+date: 2019-4-22
+*  fix PictureBrowserView defualt iamge 's URL.
 
 ####v1.1.2
 date: 2019-4-22
