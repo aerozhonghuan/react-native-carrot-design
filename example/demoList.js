@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-18 17:28:56
- * @LastEditTime: 2019-04-22 13:47:44
+ * @LastEditTime: 2019-04-24 18:57:12
  */
 
 // 一级页面  demo列表
@@ -21,10 +21,10 @@ export const MAINSCREENS = [
         module: require('./src/screens/TextInputView'),
     },
     {
-        name: 'CollectionViewDemo',
-        title: 'CollectionViewDemo',
+        name: 'CollectionView',
+        title: 'CollectionView',
         description: '九宫格',
-        module: require('./src/screens/collectionView/CollectionViewDemo'),
+        module: require('./src/screens/collectionView/CollectionView'),
     },
     {
         name: 'BannerView',
@@ -32,11 +32,29 @@ export const MAINSCREENS = [
         description: 'banner展示',
         module: require('./src/screens/BannerView'),
     },
+    // {
+    //     name: 'PictureBrowserView',
+    //     title: 'PictureBrowserView',
+    //     description: 'PictureBrowserView展示',
+    //     module: require('./src/screens/PictureBrowserView'),
+    // },
     {
-        name: 'PictureBrowserView',
-        title: 'PictureBrowserView',
-        description: 'PictureBrowserView展示',
-        module: require('./src/screens/PictureBrowserView'),
+        name: 'CornerTextView',
+        title: 'CornerTextView',
+        description: '圆角文本',
+        module: require('./src/screens/CornerTextView'),
+    },
+    {
+        name: 'LoadingView',
+        title: 'LoadingView',
+        description: 'loading加载',
+        module: require('./src/screens/LoadingView'),
+    },
+    {
+        name: 'AlertView',
+        title: 'AlertView',
+        description: '自定义AlertView',
+        module: require('./src/screens/AlertView'),
     },
 ];
 
@@ -44,21 +62,21 @@ export const MAINSCREENS = [
 // CollectionView
 export const COLLECTIONS = [
     {
-        name: 'CollectionView_f',
+        name: 'CollectionViewF',
         title: '九宫格',
         description: '经典九宫格',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        module: require('./src/screens/collectionView/CollectionViewF'),
     },
     {
-        name: 'CollectionView_s',
+        name: 'CollectionViewS',
         title: '九宫格',
-        description: '自定义item排列方式',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        description: '更多属性',
+        module: require('./src/screens/collectionView/CollectionViewS'),
     },
     {
-        name: 'CollectionView_t',
-        title: '九宫格',
-        description: '某个section数据为空或其header为空',
-        module: require('./src/screens/collectionView/CollectionView_f'),
+        name: 'CollectionViewT',
+        title: '普通列表',
+        description: '实现SectionList分组列表效果',
+        module: require('./src/screens/collectionView/CollectionViewT'),
     },
 ];

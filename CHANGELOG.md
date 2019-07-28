@@ -3,6 +3,22 @@
 date: 2019-4-22
 *  fix PictureBrowserView defualt iamge 's URL.
 
+####v1.1.6
+date: 2019-4-25
+*  Add a new feature to the TextInputView to set the icon on the left.
+
+####v1.1.5
+date: 2019-4-23
+*  Fix the problem that the CollectionView data source is not cleared.
+
+####v1.1.4
+date: 2019-4-23
+*  Optimize the section layout of the CollectionView.
+
+####v1.1.3
+date: 2019-4-22
+*  Optimize CollectionView.
+
 ####v1.1.2
 date: 2019-4-22
 *  Add PictureBrowserView, which can customize styles.

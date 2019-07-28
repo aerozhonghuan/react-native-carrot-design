@@ -3,13 +3,13 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 18:02:58
- * @LastEditTime: 2019-04-19 16:20:15
+ * @LastEditTime: 2019-04-25 11:19:18
  */
 
 // import { BannerViewProps, TextInputViewProps } from "react-native-carrot-design";
 
 declare module 'react-native-carrot-design' {
-    import { ViewStyle, SectionListScrollParams, NativeSyntheticEvent, TextInputEndEditingEventData } from 'react-native'
+    import { ViewStyle, SectionListScrollParams, NativeSyntheticEvent, TextInputEndEditingEventData, ImageSourcePropType } from 'react-native'
     import { Component } from 'react'
 
     /****** ButtonViewProps ******/
@@ -178,7 +178,6 @@ declare module 'react-native-carrot-design' {
 
     /****** TextInputViewProps ******/
     export interface TextInputViewProps {
-
         /**
          * Determines what the opacity of the wrapped view should be when touch is active.
          * Defaults to 1
@@ -186,9 +185,22 @@ declare module 'react-native-carrot-design' {
         activeOpacity?: number,
 
         /**
-         * Is there a left title.
+         * Is there a left side view, the type of the left side view.
+         * - `image`: The left side view is image.
+         * - `text`: The left side view is text.
+         * - undefined: No left side view.
          */
-        hasTitle: boolean,
+        leftType?: "image" | "text" | undefined,
+
+        /**
+         * The layout style of the left image.
+         */
+        imageStyle?: ViewStyle,
+
+        /**
+         * The left image source (either a remote URL or a local file resource).
+         */
+        leftImageSource?: ImageSourcePropType,
         
         /**
          * The content of the left title.

@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-17 10:38:22
- * @LastEditTime: 2019-04-18 11:32:24
+ * @LastEditTime: 2019-04-23 14:59:14
  */
 import React, { Component } from 'react';
 import {
@@ -15,13 +15,12 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-const { width } = Dimensions.get('window');
-const cols = 3; // 默认子item列数
-const columnSpacing = 15; // 默认子item列间距
-const rowSpacing = columnSpacing; // 默认子item行间距
-const cellW = (width - columnSpacing * (cols + 1)) / cols; // 默认子item宽
-const cellH = cellW; // 默认子item高
-const data = [];// 数据源
+const columnSpacing = 8; // 默认子item列间距
+// const cols = 3; // 默认子item列数
+// const rowSpacing = columnSpacing; // 默认子item行间距
+// const cellW = (width - columnSpacing * (cols + 1)) / cols; // 默认子item宽
+// const cellH = cellW; // 默认子item高
+let collectionDataArr = [];// 数据源
 let styles;
 export default class CollectionView extends Component {
     static propTypes = {
@@ -86,7 +85,7 @@ export default class CollectionView extends Component {
                 }
                 const item = dataSource[i];
                 section.data = [item];
-                data.push(section);
+                collectionDataArr.push(section);
             }
         } else if (headerSource.length > 0 && headerSource.length > dataSource.length) {
             let n;
@@ -99,7 +98,7 @@ export default class CollectionView extends Component {
                 } else {
                     section.data = [[]];
                 }
-                data.push(section);
+                collectionDataArr.push(section);
             }
         }
     }
@@ -107,10 +106,15 @@ export default class CollectionView extends Component {
     constructor(props) {
         super(props);
         const { headerSource, dataSource } = props;
+        collectionDataArr = [];
         CollectionView.handleDataSource(headerSource, dataSource);
         this.state = {
-            dataSource: data,
+            dataSource: collectionDataArr,
         };
+    }
+
+    componentWillUnmount() {
+        collectionDataArr = [];
     }
 
     /**
@@ -171,7 +175,7 @@ export default class CollectionView extends Component {
             return (null);
         }
         return (
-            renderSectionFooter(index)
+            typeof (renderSectionFooter) !== 'undefined' ? renderSectionFooter(index) : (null)
         );
     }
 
@@ -193,7 +197,7 @@ export default class CollectionView extends Component {
         }
         // 渲染空的组
         const { renderSectionEmptyComponent } = this.props;
-        return renderSectionEmptyComponent();
+        return typeof (renderSectionEmptyComponent) !== 'undefined' ? renderSectionEmptyComponent() : (null);
     }
 
     /**
@@ -227,7 +231,7 @@ export default class CollectionView extends Component {
         return (
             <View style={[styles.itemViewStyle, itemStyle]} key={`${sectionIndex}${itemIndex}`}>
                 {
-                    renderItem(item, sectionIndex, itemIndex)
+                    typeof (renderItem) !== 'undefined' ? renderItem(item, sectionIndex, itemIndex) : (null)
                 }
             </View>
         );
@@ -272,39 +276,40 @@ export default class CollectionView extends Component {
         } = this.props;
         const { dataSource } = this.state;
         return (
-            <SectionList
-                ref={(r) => { this.SectionList = r; }}
-                sections={dataSource} // 所有组的数据源,类似于<FlatList>中的data属性
-                renderItem={this.renderSection} // 渲染每个section项
-                keyExtractor={this.cusKeyExtractor} // 为每个section生成一个不重复的key
-                ListEmptyComponent={renderEmptyComponent} // 整个列表为空时的组件
-                ListHeaderComponent={renderHeaderComponent} // 整个列表的头部组件
-                ListFooterComponent={renderFooterComponent} // 整个列表的底部组件
-                renderSectionHeader={this.renderSectionHeader} // 每个section的头部渲染
-                renderSectionFooter={this.renderSectionFooter} // 每个section为空时的组件
-                SectionSeparatorComponent={renderSectionSeparator} // section间隔组件，在每个section的顶部和底部渲染
-                stickySectionHeadersEnabled={stickySectionHeadersEnabled} // section头部组件是否吸顶,ios默认为true;Android默认为false
-                initialNumToRender={initialNumToRender} // 指定一开始渲染的元素数量，最好刚刚够填满一个屏幕
-                onEndReached={onEndReached} // 当列表被滚动到距离内容最底部不足onEndReachedThreshold的距离时调用。
-                onEndReachedThreshold={onEndReachedThreshold} // 决定当距离内容最底部还有多远时触发onEndReached回调
-                inverted={inverted} // 翻转滚动方向。实质是将scale变换设置为-1
-            />
+            <View style={styles.container}>
+                <SectionList
+                    ref={(r) => { this.SectionList = r; }}
+                    sections={dataSource} // 所有组的数据源,类似于<FlatList>中的data属性
+                    renderItem={this.renderSection} // 渲染每个section项
+                    keyExtractor={this.cusKeyExtractor} // 为每个section生成一个不重复的key
+                    ListEmptyComponent={renderEmptyComponent} // 整个列表为空时的组件
+                    ListHeaderComponent={renderHeaderComponent} // 整个列表的头部组件
+                    ListFooterComponent={renderFooterComponent} // 整个列表的底部组件
+                    renderSectionHeader={this.renderSectionHeader} // 每个section的头部渲染
+                    renderSectionFooter={this.renderSectionFooter} // 每个section为空时的组件
+                    SectionSeparatorComponent={renderSectionSeparator} // section间隔组件，在每个section的顶部和底部渲染
+                    stickySectionHeadersEnabled={stickySectionHeadersEnabled} // section头部组件是否吸顶,ios默认为true;Android默认为false
+                    initialNumToRender={initialNumToRender} // 指定一开始渲染的元素数量，最好刚刚够填满一个屏幕
+                    onEndReached={onEndReached} // 当列表被滚动到距离内容最底部不足onEndReachedThreshold的距离时调用。
+                    onEndReachedThreshold={onEndReachedThreshold} // 决定当距离内容最底部还有多远时触发onEndReached回调
+                    inverted={inverted} // 翻转滚动方向。实质是将scale变换设置为-1
+                />
+            </View>
         );
     }
 }
 
 styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        width: Dimensions.get('window').width,
+    },
     sectionViewStyle: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        alignItems: 'center',
     },
     itemViewStyle: {
-        width: cellW,
-        height: cellH,
-        marginLeft: columnSpacing,
-        marginTop: rowSpacing,
-        alignItems: 'center',
-        backgroundColor: 'gray',
+        margin: columnSpacing,
+        flexDirection: 'column',
     },
 });

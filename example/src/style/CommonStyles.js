@@ -10,6 +10,7 @@ export const Color = {
     lineColor: '#e5e5e5',
     subTextColor: '#666666',
     placehoderColor: '#999999',
+    screenBgColor: '#F5FCFF',
 };
 
 export const FontSize = {

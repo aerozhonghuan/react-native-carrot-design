@@ -8,7 +8,9 @@ import {
     FlatList,
     View,
 } from 'react-native';
-import { Color, ConstWH, Padding, FontSize, Margin, AppDimensions } from '../../style/CommonStyles';
+import {
+    Color, ConstWH, Padding, FontSize, Margin,
+} from '../../style/CommonStyles';
 import { COLLECTIONS } from '../../../demoList';
 
 export default class CollectionViewDemo extends React.Component {
@@ -97,7 +99,6 @@ const styles = StyleSheet.create({
         fontSize: FontSize.mainTextSize,
     },
     actionInfoKey: {
-        marginLeft: Margin.containerMargin,
         color: Color.textColor,
     },
     actionInfoValue: {
