@@ -250,7 +250,7 @@ PictureBrowserView.defaultProps = {
     onPressCallback: undefined,
     onSaveCallback: undefined,
     browserData: undefined,
-    browserDefaultImg: require('../assets/images/img_bannerDefualt.png'),
+    browserDefaultImg: require('../../assets/images/img_bannerDefualt.png'),
     browserNameKey: '',
     browserStyle: {},
 };

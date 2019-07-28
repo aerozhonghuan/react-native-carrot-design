@@ -30,7 +30,7 @@ const ImageData = {
               title: '国宝大熊猫',
           },
           {
-              img: require('../Demo/images/test.png'),
+              img: require('../assets/imags/Banner_browser.png'),
               title: '健身记录',
           },
       ],
@@ -115,7 +115,7 @@ render() {
                       activeOpacity={1}
                 >
                       <Image
-                            source={require('../Demo/images/test.png')}
+                            source={require('../assets/imags/Banner_browser.png')}
                             style={styles.imageTouchStyle}
                       />
                 </TouchableOpacity>

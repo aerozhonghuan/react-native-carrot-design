@@ -109,7 +109,7 @@ export default class App extends Component {
                   activeOpacity={1}
               >
                   <Image
-                      source={require('../Demo/images/test.png')}
+                      source={require('../assets/imags/Banner_browser.png')}
                       style={styles.imageTouchStyle}
                   />
               </TouchableOpacity>

@@ -167,7 +167,7 @@ export default class PhotoZoomView extends Component {
 // 属性
 PhotoZoomView.defaultProps = {
     photoZoomStyle: {},
-    photoDefaultImg: require('../Demo/images/ic_bannerPlace.png'),
+    photoDefaultImg: require('../../assets/images/img_bannerDefualt.png'),
     onPressCallback: undefined,
     onLongPressCallBack: undefined,
 };
