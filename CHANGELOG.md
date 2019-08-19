@@ -1,6 +1,17 @@
+<!--
+ * @Description: Changelog
+ * @Author: wanglh
+ * @Date: 2019-08-19 17:11:09
+ * @LastEditors: wanglh
+ * @LastEditTime: 2019-08-19 17:13:55
+ -->
 ### Changelog
 ####v1.1.7
-date: 2019-4-22
+date: 2019-8-19
+*  fix the bug of CollectionView data update not refreshing.
+
+####v1.1.7
+date: 2019-7-22
 *  fix PictureBrowserView defualt iamge 's URL.
 
 ####v1.1.6
