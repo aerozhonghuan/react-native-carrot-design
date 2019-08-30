@@ -4,7 +4,11 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-17 10:38:22
+<<<<<<< HEAD
  * @LastEditTime: 2019-08-30 17:57:31
+=======
+ * @LastEditTime: 2019-08-30 17:59:06
+>>>>>>> master
  */
 import React, { Component } from 'react';
 import {

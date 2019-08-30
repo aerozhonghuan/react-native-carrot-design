@@ -6,6 +6,11 @@
 `javascript`
 All you need is to import { LoadingView } from the react-native-carrot-design module and then use the tag.
 `Example import`
+
+```
+import { LoadingView } from 'react-native-carrot-design';
+
+```
 *note:*
 **The LoadingView tag must be the last child of the outermost layout.**
 

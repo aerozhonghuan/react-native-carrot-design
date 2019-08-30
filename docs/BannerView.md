@@ -9,6 +9,7 @@ All you need is to import { BannerView } from the react-native-carrot-design mod
 
 ```
 import { BannerView } from 'react-native-carrot-design';
+
 ```
 ### Datasource
 ```

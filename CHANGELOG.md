@@ -1,4 +1,54 @@
+<!--
+ * @Description: Changelog
+ * @Author: wanglh
+ * @Date: 2019-08-19 17:11:09
+ * @LastEditors: wanglh
+ * @LastEditTime: 2019-08-19 17:13:55
+ -->
 ### Changelog
+####v1.1.7
+date: 2019-8-19
+*  fix the bug of CollectionView data update not refreshing.
+
+####v1.1.7
+date: 2019-7-22
+*  fix PictureBrowserView defualt iamge 's URL.
+
+####v1.1.6
+date: 2019-4-25
+*  Add a new feature to the TextInputView to set the icon on the left.
+
+####v1.1.5
+date: 2019-4-23
+*  Fix the problem that the CollectionView data source is not cleared.
+
+####v1.1.4
+date: 2019-4-23
+*  Optimize the section layout of the CollectionView.
+
+####v1.1.3
+date: 2019-4-22
+*  Optimize CollectionView.
+
+####v1.1.2
+date: 2019-4-22
+*  Add PictureBrowserView, which can customize styles.
+
+####v1.1.1
+date: 2019-4-22
+*  Add PictureBrowserView, which can customize styles.
+
+####v1.1.0 
+date: 2019-4-18
+*  Add CollectionView, which can customize styles.
+
+####v1.0.10 
+date: 2019-4-10
+*  Add BannerView export, which can customize styles.
+
+####v1.0.9 
+date: 2019-4-10
+*  Add BannerView export, which can customize styles.
 
 ####v1.0.8 
 date: 2019-4-10

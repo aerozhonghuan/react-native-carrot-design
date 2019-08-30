@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 17:31:51
- * @LastEditTime: 2019-03-22 17:37:48
+ * @LastEditTime: 2019-04-17 17:46:49
  */
 
 import ButtonView from './src/ButtonView';
@@ -16,6 +16,19 @@ import TextInputView from './src/TextInputView';
 
 import AlertView from './src/AlertView';
 
+import BannerView from './src/BannerView';
+
+import CollectionView from './src/CollectionView';
+
+import PictureBrowserView from './src/PictureBrowserView/PictureBrowserView';
+
 export {
-    ButtonView, CornerTextView, LoadingView, TextInputView, AlertView,
+    ButtonView,
+    CornerTextView,
+    LoadingView,
+    TextInputView,
+    AlertView,
+    BannerView,
+    CollectionView,
+    PictureBrowserView,
 };

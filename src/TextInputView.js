@@ -1,3 +1,11 @@
+/*
+ * @Description: TextInputView, which can customize styles
+ * @Author: wanglh
+ * @LastEditors: wanglh
+ * @Date: 2019-04-03 19:32:20
+ * @LastEditTime: 2019-04-25 11:33:38
+ */
+
 import React, { PureComponent } from 'react';
 import {
     StyleSheet,
@@ -5,6 +13,7 @@ import {
     TextInput,
     TouchableOpacity,
     Dimensions,
+    Image,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -18,7 +27,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderColor: '#e5e5e5',
         borderBottomWidth: 0.5,
-
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -31,6 +39,12 @@ const styles = StyleSheet.create({
         color: '#333333',
         textAlign: 'left',
     },
+
+    inputImage: {
+        height: inputHeight - 6,
+        width: inputHeight - 6,
+    },
+
     input: {
         flex: 3,
         marginLeft: 3,
@@ -39,17 +53,18 @@ const styles = StyleSheet.create({
         lineHeight: inputHeight,
         fontSize: 14,
         color: '#666666',
-        backgroundColor: 'orange',
     },
 });
 export default class TextInputView extends PureComponent {
     static propTypes = {
-        hasTitle: PropTypes.bool.isRequired,
+        imageStyle: PropTypes.oneOfType([PropTypes.object]),
+        leftImageSource: PropTypes.oneOfType([PropTypes.any]),
+        leftType: PropTypes.string,
         leftTitle: PropTypes.string,
         activeOpacity: PropTypes.number,
-        inputBgStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
-        inputStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
-        titleStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
+        inputBgStyle: PropTypes.oneOfType([PropTypes.object]),
+        inputStyle: PropTypes.oneOfType([PropTypes.object]),
+        titleStyle: PropTypes.oneOfType([PropTypes.object]),
         allowFontScaling: PropTypes.bool,
         autoCorrect: PropTypes.bool,
         autoFocus: PropTypes.bool,
@@ -71,6 +86,9 @@ export default class TextInputView extends PureComponent {
     };
 
     static defaultProps = {
+        imageStyle: styles.inputImage,
+        leftImageSource: undefined,
+        leftType: undefined,
         leftTitle: undefined,
         activeOpacity: 1,
         inputBgStyle: styles.inputRow,
@@ -98,7 +116,8 @@ export default class TextInputView extends PureComponent {
 
     render() {
         const {
-            hasTitle, leftTitle, activeOpacity, inputBgStyle,
+            leftImageSource,
+            imageStyle, leftType, leftTitle, activeOpacity, inputBgStyle,
             titleStyle, allowFontScaling, autoCorrect, autoFocus,
             blurOnSubmit, caretHidden, contextMenuHidden, defaultValue,
             editable, keyboardType, maxLength, onEndEditing,
@@ -107,9 +126,15 @@ export default class TextInputView extends PureComponent {
         } = this.props;
         return (
             <TouchableOpacity style={[inputBgStyle]} activeOpacity={activeOpacity}>
-                {hasTitle ? (
+                {leftType === 'image' ? (
+                    <Image
+                        source={leftImageSource}
+                        style={[imageStyle]}
+                    />
+                ) : (leftType === 'text' ? (
                     <Text style={[titleStyle]}>{leftTitle}</Text>
-                ) : (null)}
+                ) : (null)
+                )}
                 <TextInput
                     allowFontScaling={allowFontScaling || true}
                     autoCorrect={autoCorrect || true}

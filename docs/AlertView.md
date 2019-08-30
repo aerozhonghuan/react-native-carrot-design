@@ -6,7 +6,10 @@
 `javascript`
 All you need is to import { AlertView } from the react-native-carrot-design module and then use the tag.
 `Example import`
+```
+import { AlertView } from 'react-native-carrot-design';
 
+```
 ```
 ...
 render() {

@@ -8,6 +8,7 @@ All you need is to import { ButtonView } from the react-native-carrot-design mod
 `Example import`
 ```
 import { ButtonView } from 'react-native-carrot-design';
+
 ```
 ```
 ...

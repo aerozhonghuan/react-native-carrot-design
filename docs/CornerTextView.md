@@ -8,6 +8,7 @@ All you need is to import { CornerTextView } from the react-native-carrot-design
 `Example import`
 ```
 import { CornerTextView } from 'react-native-carrot-design';
+
 ```
 ```
 ...
