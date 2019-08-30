@@ -6,7 +6,11 @@
  * @LastEditTime: 2019-08-19 17:13:55
  -->
 ### Changelog
-####v1.1.7
+####v1.1.9
+date: 2019-8-30
+*  fix the bug of CollectionView data update not refreshing.
+
+####v1.1.8
 date: 2019-8-19
 *  fix the bug of CollectionView data update not refreshing.
 
