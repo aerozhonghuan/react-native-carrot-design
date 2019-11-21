@@ -6,6 +6,10 @@
  * @LastEditTime: 2019-08-19 17:13:55
  -->
 ### Changelog
+####v1.2.0
+date: 2019-8-30
+*  fix the bug of Banner about Android in some type phone .
+
 ####v1.1.9
 date: 2019-8-30
 *  fix the bug of CollectionView data update not refreshing.
