@@ -150,3 +150,4 @@ render() {
 | browserKey | none | `string` | Key of picture browser image resource |  `true `|
 | browserCache | `default` | `string` | Cache strategy |  `false `|
 | browserStyle | none | `object` | Container layout |  `false `|
+| drawSaveButton | false | `bool` | draw save button |  `false `|
