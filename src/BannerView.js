@@ -21,7 +21,7 @@ let allImgCount = 0;
 // 是否替换首部banner
 let isChange = false;
 // 图片数组
-const allImage = [];
+let allImage = [];
 const { width } = Dimensions.get('window');
 
 export default class BannerView extends Component {
@@ -52,6 +52,10 @@ export default class BannerView extends Component {
    * @returns {Array}
    */
   loadImages = () => {
+    // 移除旧数据
+    allImgCount = 0;
+    allImage = [];
+
     const {
       bannerImageStyle, onPressCallback, bannerDefaultImg, bannerData, bannerKey, bannerCache,
     } = this.props;

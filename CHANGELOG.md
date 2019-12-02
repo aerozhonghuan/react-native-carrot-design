@@ -6,6 +6,10 @@
  * @LastEditTime: 2019-08-19 17:13:55
  -->
 ### Changelog
+####v1.1.11
+date: 2019-8-30
+*  fix the bug of Banner and PictureBrowserView.
+
 ####v1.1.10
 date: 2019-8-30
 *  fix the bug of Banner about Android in some type phone .

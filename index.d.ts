@@ -449,6 +449,10 @@ declare module 'react-native-carrot-design' {
          * Container layout
          */
         browserStyle?: ViewStyle,
+        /**
+         * draw save button
+         */
+        drawSaveButton?: boolean,
     }
     export class PictureBrowserView extends Component<PictureBrowserViewProps, any> {
     }
