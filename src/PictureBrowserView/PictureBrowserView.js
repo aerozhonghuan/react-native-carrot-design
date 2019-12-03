@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import {
     ScrollView, StyleSheet, View,
-    Text, Dimensions, Modal, Platform, ViewPagerAndroid,
+    Text, Dimensions, Modal, Platform, ViewPagerAndroid,TouchableOpacity,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import PictureBrowserSaveView from './PictureBrowserSaveView';
