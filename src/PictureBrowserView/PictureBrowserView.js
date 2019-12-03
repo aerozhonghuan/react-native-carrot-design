@@ -57,7 +57,6 @@ export default class PictureBrowserView extends Component {
     // 移除旧数据
     allImgCount = 0;
     allImage = [];
-
     const {
       onPressCallback, browserDefaultImg,
       browserData, browserKey, browserCache,
@@ -180,7 +179,7 @@ export default class PictureBrowserView extends Component {
 
   render() {
     const {
-      browserStyle, modalVisible, currentTapIndex, browserData, browserNameKey,
+      browserStyle, modalVisible, currentTapIndex, browserData, browserNameKey,onPressCallback
     } = this.props;
 
     const imageArrs = browserData.data;
@@ -207,7 +206,20 @@ export default class PictureBrowserView extends Component {
                 style={[styles.container, browserStyle]}
             >
               <View style={styles.textViewStyle}>
-                <Text style={styles.titleStyle}>{titleStr}</Text>
+                <TouchableOpacity
+                    style={styles.backButtonStyle}
+                    onPress={() => onPressCallback(0)}
+                    activeOpacity={1}
+                >
+                  <Text style={styles.backTitleStyle}>
+                    返回
+                  </Text>
+                </TouchableOpacity>
+                <View style={styles.textHeaderStyle}>
+                  <Text style={styles.titleStyle}>
+                    {titleStr}
+                  </Text>
+                </View>
               </View>
               <ScrollView
                   style={[styles.scrollViewStyle, browserStyle]}
@@ -243,9 +255,20 @@ export default class PictureBrowserView extends Component {
               style={[styles.container, browserStyle]}
           >
             <View style={styles.textViewStyle}>
-              <Text style={styles.titleStyle}>
-                {titleStr}
-              </Text>
+              <TouchableOpacity
+                  style={styles.backButtonStyle}
+                  onPress={() => onPressCallback(0)}
+                  activeOpacity={1}
+              >
+                <Text style={styles.backTitleStyle}>
+                  返回
+                </Text>
+              </TouchableOpacity>
+              <View style={styles.textHeaderStyle}>
+                <Text style={styles.titleStyle}>
+                  {titleStr}
+                </Text>
+              </View>
             </View>
             <ViewPagerAndroid
                 style={[styles.pageViewAndriodStyle, browserStyle]}
@@ -316,9 +339,11 @@ styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width,
+    flex:1
   },
   scrollImageStyle: {
     alignItems: 'center',
+    flex:1,
   },
   scrollViewStyle: {
     flex: 1,
@@ -327,16 +352,36 @@ styles = StyleSheet.create({
     height: height - 2 * topHeight,
     width,
   },
+  backButtonStyle: {
+    marginTop: 25,
+    height:40,
+    width:60,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  backTitleStyle: {
+    height:40,
+    width:60,
+    textAlign:'center',
+    color:'white',
+  },
+  textHeaderStyle: {
+    width: width - 60,
+    height: topHeight,
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
   textViewStyle: {
     width,
     height: topHeight,
     justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'row',
   },
   titleStyle: {
     fontSize: 16,
     color: '#E8E8E8',
     marginTop: 25,
+    marginLeft: -60,
   },
   pageIndexStyle: {
     fontSize: 16,
