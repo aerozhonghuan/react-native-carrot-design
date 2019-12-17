@@ -394,6 +394,10 @@ declare module 'react-native-carrot-design' {
          * Page indicator icon layout
          */
         pageIndexMoreStyle?: ViewStyle,
+        /**
+         * control to scroll
+         */
+        bannerCanScroll?: boolean,
     }
     export class BannerView extends Component<BannerViewProps, any> {
     }
@@ -445,6 +449,10 @@ declare module 'react-native-carrot-design' {
          * Container layout
          */
         browserStyle?: ViewStyle,
+        /**
+         * draw save button
+         */
+        drawSaveButton?: boolean,
     }
     export class PictureBrowserView extends Component<PictureBrowserViewProps, any> {
     }

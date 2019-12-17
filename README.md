@@ -130,6 +130,7 @@ render() {
                     pageIndexViewMoreStyle={{ width, height: 25 }}
                     bannerData={ImageData}
                     bannerKey="img"
+                    bannerCanScroll={true}
                     onPressCallback={item => this.touchBanner(item)}
                 />
             </View>
