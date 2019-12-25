@@ -435,7 +435,7 @@ BannerView.propTypes = {
   // 页面指示器图标的布局
   pageIndexMoreStyle: PropTypes.oneOfType([PropTypes.object]),
   // 是否允许banner自动滚动
-  bannerCanScroll: PropTypes.boolean,
+  bannerCanScroll: PropTypes.bool,
 
 };
 
