@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-04-18 17:28:56
- * @LastEditTime: 2019-04-24 18:57:12
+ * @LastEditTime: 2020-06-03 15:25:45
  */
 
 // 一级页面  demo列表
@@ -55,6 +55,12 @@ export const MAINSCREENS = [
         title: 'AlertView',
         description: '自定义AlertView',
         module: require('./src/screens/AlertView'),
+    },
+    {
+        name: 'TabSelectView',
+        title: 'TabSelectView',
+        description: '自定义TabSelectView',
+        module: require('./src/screens/TabSelectView'),
     },
 ];
 
