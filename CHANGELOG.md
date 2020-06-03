@@ -3,9 +3,12 @@
  * @Author: wanglh
  * @Date: 2019-08-19 17:11:09
  * @LastEditors: wanglh
- * @LastEditTime: 2019-08-19 17:13:55
+ * @LastEditTime: 2020-06-03 17:17:48
  -->
 ### Changelog
+
+####v1.1.16 date: 2020-06-03
+Add TabSelectView, which can customize styles.
 ####v1.1.15
 date: 2019-12-25
 *  fix the bug of Banner .

@@ -83,3 +83,4 @@ render() {
 | bannerImageStyle | none | `object` | Banner image layout |  `false `|
 | pageIndexViewMoreStyle | none | `object` | Page indicator layout |  `false `|
 | pageIndexMoreStyle | none | `object` | Page indicator icon layout |  `false `|
+| bannerCanScroll | fasle | `boolean` | control to scroll |  `false `|
