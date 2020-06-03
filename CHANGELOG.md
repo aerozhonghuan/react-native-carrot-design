@@ -3,9 +3,20 @@
  * @Author: wanglh
  * @Date: 2019-08-19 17:11:09
  * @LastEditors: wanglh
- * @LastEditTime: 2019-08-19 17:13:55
+ * @LastEditTime: 2020-06-03 16:56:53
  -->
 ### Changelog
+####v1.1.16 date: 2020-06-03
+Add TabSelectView, which can customize styles
+
+####v1.1.15 date: 2019-12-25
+
+fix the bug of Banner . ####v1.1.14 date: 2019-12-3
+fix the bug of Banner and PictureBrowserView. ####v1.1.13 date: 2019-12-3
+fix the bug of Banner and PictureBrowserView. ####v1.1.12 date: 2019-12-2
+fix the bug of Banner and PictureBrowserView. ####v1.1.11 date: 2019-12-2
+fix the bug of Banner and PictureBrowserView.
+
 ####v1.1.14
 date: 2019-12-3
 *  fix the bug of Banner and PictureBrowserView.

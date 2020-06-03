@@ -3,7 +3,7 @@
  * @Author: wanglh
  * @LastEditors: wanglh
  * @Date: 2019-03-11 18:02:58
- * @LastEditTime: 2019-04-25 11:19:18
+ * @LastEditTime: 2020-06-03 16:30:43
  */
 
 // import { BannerViewProps, TextInputViewProps } from "react-native-carrot-design";
@@ -576,5 +576,66 @@ declare module 'react-native-carrot-design' {
          * Displays the scroll indicators momentarily.
          */
         flashScrollIndicators: () => void;
+    }
+
+    /****** TabSelectViewProps ******/
+    export interface TabSelectViewProps {
+
+        /** 需要展示的选项值的key
+         * 比如：[{title:'视频介绍'},{title:'车型介绍'}].就传'title'
+         */
+        jsonKey: string,
+        /** 按钮数据源
+        * 单个元素必须包含jsonKey键值对,比如：[{title:'视频介绍'},{title:'车型介绍'}].
+        */
+        dataSource: Array,
+        /** 默认选中按钮的索引
+        * 默认选中第一个按钮，即0
+        */
+        selectIndex?: number,
+        /** 是否显示按钮下划线
+        * 默认显示
+        */
+        showBtnBottomLine?: boolean,
+        /** 整个tabView的布局
+         * 默认高为44，宽为屏幕宽
+         */
+        bgViewStyle?: ViewStyle,
+        /** 单个按钮的布局
+         * 默认高为44，宽为屏幕宽/按钮个数
+         */
+        itemStyle?: ViewStyle,
+        /** 按钮标题的默认样式
+         * fontSize: 15,color: '#666666',
+         */
+        itemTitleNormalStyle?: ViewStyle,
+        /** 按钮标题的选中样式
+         * fontSize: 15,color: '#EC192E',
+         */
+        itemTitleSelectStyle?: ViewStyle,
+        /** 按钮下划线的样式
+         * 默认高4，宽30,backgroundColor:'#EC192E',
+         */
+        itemLineStyle?: ViewStyle,
+
+        /** 自定义单个按钮
+        * 当自定义renderItem时,itemStyle,itemTitleNormalStyle,itemTitleSelectStyle,itemLineStyle,selectCallback均无效
+        */
+        renderItem?: (item: object) => React.ReactElement | null,
+        
+        /**
+        * 按钮点击时的透明效果(0~1)
+        * Defaults to 1
+        */
+        activeOpacity?: number,
+        
+        /** 选中item的回调,回调内容(item:当前按钮的数据源, selectIndex:当前选中的按钮索引)
+        * 当自定义renderItem时失效
+        * @param {object} item 选中的tab对应的数据对象
+        * @param {number} index 选中的tab对应的索引
+        */
+        selectCallback?: (item:object, index: number) => void,
+    }
+    export class TabSelectView extends Component<TabSelectViewProps, any> {
     }
 }

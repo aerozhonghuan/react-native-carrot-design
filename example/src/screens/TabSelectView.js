@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @Date: 2019-12-17 18:06:24
  * @LastEditors: wanglh
- * @LastEditTime: 2020-06-03 15:52:57
+ * @LastEditTime: 2020-06-03 16:53:05
  */
 /* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
@@ -28,7 +28,7 @@ export default class TabSelectViewDemo extends Component {
     /**
      * @description: tab选择
      * @param {item} 所选类型
-     * @param {selectIndex} 所选类型的索引
+     * @param {selIndex} 所选类型的索引
      */
     selectTab = (item, selIndex) => {
         const { selectIndex } = this.state;
@@ -37,7 +37,6 @@ export default class TabSelectViewDemo extends Component {
         }
         this.setState({
             selectIndex: selIndex,
-            selectType: item.type,
         }, () => {
             console.log(this.state.selectIndex);
         });
