@@ -4,7 +4,7 @@
  * @Author: wanglh
  * @Date: 2019-12-17 18:06:24
  * @LastEditors: wanglh
- * @LastEditTime: 2020-06-03 15:24:01
+ * @LastEditTime: 2020-06-03 15:52:57
  */
 /* eslint-disable no-use-before-define */
 import React, { Component } from 'react';
@@ -17,6 +17,14 @@ import { TabSelectView } from 'react-native-carrot-design';
 import { Color, AppDimensions } from '../style/CommonStyles';
 
 export default class TabSelectViewDemo extends Component {
+    constructor(props) {
+        super(props);
+        this.tapArr = [{ title: '外观' }, { title: '驾驶室' }, { title: '底盘' }, { title: '上装' }, { title: 'VR' }];
+        this.state = {
+            tapDataSource: this.tapArr,
+            selectIndex: 0, // 默认选中第一个按钮
+        };
+    }
     /**
      * @description: tab选择
      * @param {item} 所选类型
