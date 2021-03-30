@@ -5187,6 +5187,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-native-carrot-design@^1.1.14:
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/react-native-carrot-design/-/react-native-carrot-design-1.1.16.tgz#f15449f9f4710bf5af2cf4fb8d867b9c1cd86114"
+  integrity sha512-VDtJmCgl21SiWyPf4IjrStmKk1XKTEUq+sc+VvfHL9sRLp03JH4vBaWg5xlYz8d5G7957jVwsmgm9VA7yDoptA==
+
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.1.0.tgz#2a7d545ad2e0ca23adce22b2af441ad360ecccee"
@@ -6629,9 +6634,9 @@ xtend@~4.0.1:
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "http://registry.npm.taobao.org/y18n/download/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0":
   version "4.0.0"
