@@ -6,7 +6,8 @@
  * @LastEditTime: 2020-06-03 17:17:48
  -->
 ### Changelog
-
+####v1.1.18 date: 2021-11-01
+fix PictureBrowserView style .
 ####v1.1.17 date: 2021-11-01
 fix PictureBrowserView style .
 ####v1.1.16 date: 2020-06-03
