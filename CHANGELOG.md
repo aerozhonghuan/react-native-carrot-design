@@ -7,6 +7,8 @@
  -->
 ### Changelog
 
+####v1.1.17 date: 2021-11-01
+fix PictureBrowserView style .
 ####v1.1.16 date: 2020-06-03
 Add TabSelectView, which can customize styles.
 ####v1.1.15

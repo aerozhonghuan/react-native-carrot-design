@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import {
     ScrollView, StyleSheet, View,
-    Text, Dimensions, Modal, Platform, ViewPagerAndroid,TouchableOpacity,
+    Text, Dimensions, Modal, Platform, ViewPagerAndroid,TouchableOpacity,SafeAreaView
 } from 'react-native';
 import PropTypes from 'prop-types';
 import PictureBrowserSaveView from './PictureBrowserSaveView';
@@ -124,9 +124,11 @@ export default class PictureBrowserView extends Component {
     // 对应页面指示器的索引
     const currentIndex = Math.floor(offsetX / width) + 1;
     console.log(`数据--currentIndex=${currentIndex}`);
-    this.setState({
-      currentPage: currentIndex,
-    });
+    if (currentIndex >= 1) {
+      this.setState({
+        currentPage: currentIndex,
+      });
+    }
   };
 
   pageScrollEnd = (e) => {
@@ -202,9 +204,8 @@ export default class PictureBrowserView extends Component {
                 console.log('关闭图片浏览器');
               }}
           >
-            <View
-                style={[styles.container, browserStyle]}
-            >
+    <SafeAreaView style={styles.safeAreaStyle}>
+      <View style={[styles.container, browserStyle]}>
               <View style={styles.textViewStyle}>
                 <TouchableOpacity
                     style={styles.backButtonStyle}
@@ -239,6 +240,7 @@ export default class PictureBrowserView extends Component {
               </View>
               {this.alterSaveView()}
             </View>
+          </SafeAreaView>
           </Modal>
       );
     }
@@ -328,6 +330,9 @@ PictureBrowserView.propTypes = {
 };
 
 styles = StyleSheet.create({
+  safeAreaStyle: {
+    flex: 1,
+  },
   container: {
     height,
     width,
@@ -347,15 +352,16 @@ styles = StyleSheet.create({
   },
   scrollViewStyle: {
     flex: 1,
+    marginBottom: 20,
   },
   pageViewAndriodStyle: {
     height: height - 2 * topHeight,
     width,
   },
   backButtonStyle: {
-    marginTop: 25,
-    height:40,
-    width:60,
+    marginTop: 0,
+    height:70,
+    width:100,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -386,6 +392,6 @@ styles = StyleSheet.create({
   pageIndexStyle: {
     fontSize: 16,
     color: '#E8E8E8',
-    marginBottom: 10,
+    marginTop: - 15,
   },
 });
