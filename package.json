@@ -1,6 +1,6 @@
 {
   "name": "react-native-carrot-design",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "description": "This is the React Native custom UI components library, It's components for android and iOS.",
   "main": "index.js",
   "scripts": {
