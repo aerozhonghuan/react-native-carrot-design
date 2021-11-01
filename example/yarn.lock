@@ -948,9 +948,9 @@ acorn-walk@^6.0.1:
   integrity sha1-02O2b1+sXwGP+cOh57b44xDMORM=
 
 acorn@^5.5.3:
-  version "5.7.3"
-  resolved "http://registry.npm.taobao.org/acorn/download/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha1-Z6ojG/iBKXS4UjWpZ3Hra9B+onk=
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 acorn@^6.0.1, acorn@^6.0.7:
   version "6.1.1"
@@ -5186,6 +5186,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
+
+react-native-carrot-design@^1.1.9:
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/react-native-carrot-design/-/react-native-carrot-design-1.1.15.tgz#3809c8d4b402181eae53d79df30390d166b57a78"
+  integrity sha512-pSfie/NKKqZlZpWKNBscXH8zWLGRO+O39hEdSLBhNNdtWm0qndZCwAfBLYzryF0WhEufE+JLbZ+5MylIDqCdkg==
 
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
