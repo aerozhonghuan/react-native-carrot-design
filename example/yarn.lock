@@ -5122,9 +5122,9 @@ punycode@^2.1.0, punycode@^2.1.1:
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "http://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^6.2.0:
   version "6.4.2"
@@ -5186,6 +5186,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
+
+react-native-carrot-design@^1.1.14:
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/react-native-carrot-design/-/react-native-carrot-design-1.1.18.tgz#bf12495fc2067d4dc5b458591febe58a029fb4fe"
+  integrity sha512-MH9swDfmPSdxqj5Ar+whmQSijCu/Jd1ejbmq9OBO2g0erqcBKjpfnB86aXSGUCRhZNZgRGKHfqieWsSzcv5BfA==
 
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
