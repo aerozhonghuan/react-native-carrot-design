@@ -3715,11 +3715,9 @@ json-stringify-safe@~5.0.1:
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
 json5@^2.1.0:
-  version "2.1.0"
-  resolved "http://registry.npm.taobao.org/json5/download/json5-2.1.0.tgz#e7a0c62c48285c628d20a10b85c89bb807c32850"
-  integrity sha1-56DGLEgoXGKNIKELhcibuAfDKFA=
-  dependencies:
-    minimist "^1.2.0"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonfile@^2.1.0:
   version "2.4.0"
@@ -5186,6 +5184,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
+
+react-native-carrot-design@^1.1.14:
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/react-native-carrot-design/-/react-native-carrot-design-1.1.18.tgz#bf12495fc2067d4dc5b458591febe58a029fb4fe"
+  integrity sha512-MH9swDfmPSdxqj5Ar+whmQSijCu/Jd1ejbmq9OBO2g0erqcBKjpfnB86aXSGUCRhZNZgRGKHfqieWsSzcv5BfA==
 
 react-native-gesture-handler@^1.1.0:
   version "1.1.0"
